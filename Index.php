@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<?php 
+<?php
 
 ?>
-=======
-<?php ?>
->>>>>>> 4a9398d2401aa82f20977c3df4f74730b80dec46
+
 <!doctype html>
 <html lang="en">
 <head>
