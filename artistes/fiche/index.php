@@ -5,8 +5,6 @@
     $niveau='../../';
     //Inclusion du fichier de configuration
     include($niveau . "inc/fragment/config.inc-michel.php");
-    //include($niveau . "inc/fragment/config.inc-michel.php");
-
 ?>
 
 <!doctype html>
@@ -18,7 +16,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fiche "artistes/fiche/index.php</title>
 </head>
+
 <body>
     <h1>Fiche "artistes/fiche/index.php</h1>
+    <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
+    <main>Contenu principal</main>
+    <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
 </body>
+
 </html>
