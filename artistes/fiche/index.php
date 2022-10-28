@@ -28,26 +28,29 @@
         <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">
 
         <h2>Description</h2>
-        <p>Yoo ch'ai lu dans les DNA que le Racing a encore perdu contre Oberschaeffolsheim. Verdammi et moi ch'avais donc parié deux knacks et une flammekueche. Ah so ? T'inquiète, ch'ai ramené du schpeck, du chambon, un kuglopf et du schnaps dans mon rucksack. Allez, s'guelt ! Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au réchime, je ne mange plus que des Grumbeere light et che fais de la chym avec Chulien. Tiens, un rottznoz sur le comptoir.</p>
+        <p>La formation 3D KIDS existe depuis 2004. Puriste de punk '77, les 3D KIDS gardent ça simple et droit au but. X (guitare/voix), Y (batterie) et Z (basse) ont deux albums à leur actif (ZYX et Retarded Love) et un troisième est prévu avant la fin de l'année.</p>
 
         <h2>Provenance</h2>
-        <p>Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ?</p>
+        <p>Québec</p>
 
         <h2>Style musical</h2>
-        <p>Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ?</p>
+        <p>Rock</p>
+
+        <h2>Représentations</h2>
+        <p>Salle Multi de Méduse, le jeudi 9 juillet à 22h30</p>
+        <p>Salle Multi de Méduse, le vendredi 10 juillet à 23h00</p>
 
         <h2>Découvrir d'autres artistes</h2>
-        <p>Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ?</p>
-
-        <h2>Provenance</h2>
-        <p>Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ?</p>
+        <div class="container">
+            <ul class="artistes_ul">
+            <?php
+                for($intCptRandom=0; $intCptRandom<3; $intCptRandom++){ ?>
+                    <br><img class="artistes_img" style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>
+                <?php } ?>
+            </ul>
+        </div>
     </main>
-
-    <footer class="footer full-bleed" role="contentinfo">
-        <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
-        <p>Lorem Elsass ipsum lacus leverwurscht Wurschtsalad mamsell Gal. gewurztraminer turpis, suspendisse commodo Oberschaeffolsheim ornare aliquam semper Miss Dahlias Mauris turpis sagittis kuglopf, Gal !</p>
-    </footer>
-
+    <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
 </div>
 </body>
 
