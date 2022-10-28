@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 * {
   font-family: "sans-serif", "Kanit";
 }
@@ -28,6 +29,11 @@
   width: 60%;
 }
 .header .header__btn {
+  justify-self: flex-end;
+  margin: 0 0 1em 1em;
+}
+
+.main__btn {
   width: 15vw;
   height: 8vh;
   border: #00102E solid 3px;
@@ -35,19 +41,58 @@
   outline: #00102E solid 3px;
   outline-offset: -10px;
   font-size: inherit;
-  justify-self: flex-end;
-  margin: 0 0 1em 1em;
+}
+
+.titrePrincipal {
+  font-family: "Krona One", sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: #057096 1px 3px;
 }
 
 /*FOOTER*/
 .footer {
   background: #00102E;
   color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-.footer .footer__logo {
+.footer .footer__copyright {
+  flex: 1 0 100%;
+}
+
+.logo-adresse {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.logo-adresse .logo-adresse__logo {
   width: 25vw;
   padding: 2em;
   font-size: 1.5em;
+}
+.logo-adresse .logo-adresse__adresse {
+  padding-right: 2em;
+}
+
+.footer--nav {
+  list-style-type: none;
+  flex: 0 1 40%;
+}
+
+.informations .informations__btn {
+  color: #ffffff;
+  border: #ffffff solid 3px;
+  outline: #ffffff solid 3px;
+  font-size: inherit;
+  flex: 0 1 40%;
 }
 
 /*# sourceMappingURL=style-anais.css.map */
