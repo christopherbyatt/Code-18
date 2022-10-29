@@ -6,6 +6,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="../css/style-anais.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
 </head>
 <body>
 <header class="header" role="banner">

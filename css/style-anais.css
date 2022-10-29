@@ -4,6 +4,15 @@
   font-family: "sans-serif", "Kanit";
 }
 
+html {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
 /*HEADER*/
 .header {
   height: 500px;
@@ -12,10 +21,17 @@
   color: #00102E;
   font-size: 1.5em;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 500px) {
+  .header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
 }
 .header .header__logo {
   width: 30%;
@@ -23,10 +39,34 @@
 .header .nav {
   list-style-type: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 60%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1 0 100%;
+}
+@media (min-width: 500px) {
+  .header .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 60%;
+  }
+}
+@media (min-width: 500px) {
+  .header .nav .nav__item {
+    flex: 0 1 25%;
+  }
+}
+.header .nav .nav__lien {
+  width: 100%;
+  display: inline-block;
+}
+@media (min-width: 500px) {
+  .header .nav .nav__lien {
+    display: inline;
+  }
 }
 .header .header__btn {
   justify-self: flex-end;
@@ -34,8 +74,9 @@
 }
 
 .main__btn {
-  width: 15vw;
-  height: 8vh;
+  width: 12em;
+  height: 4em;
+  padding: 0.5em 0;
   border: #00102E solid 3px;
   background: transparent;
   outline: #00102E solid 3px;
@@ -48,7 +89,6 @@
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: #057096 1px 3px;
 }
 
 /*FOOTER*/
@@ -57,26 +97,48 @@
   color: #fff;
   font-size: 1.5em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
 }
+@media (min-width: 500px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
 .footer .footer__copyright {
   flex: 1 0 100%;
+  text-align: center;
 }
 
 .logo-adresse {
   flex: 1 0 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2em;
+}
+@media (min-width: 500px) {
+  .logo-adresse {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2em;
+  }
 }
 .logo-adresse .logo-adresse__logo {
-  width: 25vw;
-  padding: 2em;
+  max-width: 50%;
   font-size: 1.5em;
+}
+@media (min-width: 500px) {
+  .logo-adresse .logo-adresse__logo {
+    padding: 1.5em;
+  }
 }
 .logo-adresse .logo-adresse__adresse {
   padding-right: 2em;
@@ -87,12 +149,58 @@
   flex: 0 1 40%;
 }
 
+.informations {
+  border: #057096 solid 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .informations .informations__btn {
+  align-self: center;
   color: #ffffff;
   border: #ffffff solid 3px;
   outline: #ffffff solid 3px;
   font-size: inherit;
-  flex: 0 1 40%;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.informations .information__lien {
+  display: inline-block;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .informations .information__lien {
+    display: inline;
+  }
+}
+.informations .informations__p {
+  text-align: center;
+  align-self: center;
+  margin-top: 2em;
+}
+
+.reseaux {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 500px) {
+  .reseaux {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.reseaux .reseaux__lien {
+  display: inline-block;
+}
+@media (min-width: 500px) {
+  .reseaux .reseaux__lien {
+    display: inline;
+  }
 }
 
 /*# sourceMappingURL=style-anais.css.map */
