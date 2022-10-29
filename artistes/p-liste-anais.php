@@ -22,22 +22,25 @@
 <main class="main" role="main">
     <h1 class="titrePrincipal">Liste <br> des <br> artistes</h1>
     <section class="artistes">
-        <div>
+        <div class="ctn-infoArtiste">
             <figure class="infoArtiste">
-                <img class="infoArtiste__img" src="" alt="">
-                <figcaption class="infoArtiste__nom">Cabaret Olibrius</figcaption>
+                <img class="infoArtiste__img" src="../images/cabaret_olibrius.jpg" alt="Cabaret Olibrius">
+                <figcaption class="infoArtiste__nom nom--un">Cabaret Olibrius</figcaption>
             </figure>
             <figure class="infoArtiste">
-                <img class="infoArtiste__img" src="" alt="">
-                <figcaption class="infoArtiste__nom">Diamond Rings</figcaption>
+                <img class="infoArtiste__img" src="../images/diamond_rings.jpg" alt="Diamond Rings">
+                <figcaption class="infoArtiste__nom nom--deux">Diamond Rings</figcaption>
             </figure>
             <figure class="infoArtiste">
-                <img class="infoArtiste__img" src="" alt="">
-                <figcaption class="infoArtiste__nom">Jah & I</figcaption>
+                <img class="infoArtiste__img" src="../images/jah_i.jpg" alt="Jah & I">
+                <figcaption class="infoArtiste__nom nom--trois">Jah & I</figcaption>
             </figure>
-            <button class="arriere" type="button">arriere</button>
-            <button class="avant" type="button">avant</button>
         </div>
+        <div class="ctn-btn">
+            <button class="arriere" type="button">&#9664;</button>
+            <button class="avant" type="button">&#9654;</button>
+        </div>
+
     </section>
 </main>
 

@@ -84,6 +84,72 @@ body{
   text-transform: uppercase;
   text-align: center;
 }
+/*SECTION*/
+.artistes{
+  background: #00102E;
+  margin-bottom: 3em;
+}
+
+/*IMAGES*/
+.ctn-infoArtiste{
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media(min-width: 500px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .infoArtiste{
+    position: relative;
+  }
+  .infoArtiste__img{
+    max-width: 100%;
+  }
+  .infoArtiste__nom{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 3;
+    width: 100%;
+    padding: .6em 0;
+  }
+}
+.nom--un{
+  background: #FDDC3E;
+}
+.nom--deux{
+  background: #F5A500;
+}
+.nom--trois{
+  background: #00BBCA;
+}
+
+/* DEPLOIEMENT DU NOM */
+.infoArtiste:hover>infoArtiste__nom{
+  height: 100%;
+}
+
+
+.ctn-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  .arriere,
+  .avant{
+    background: transparent;
+    border: none;
+    /*border: #fff solid 1px;
+    border-radius: 50%;*/
+    color: #fff;
+    font-size: 2em;
+    /*padding: 0 0;*/
+  }
+}
+
 
 /*FOOTER*/
 .footer{
