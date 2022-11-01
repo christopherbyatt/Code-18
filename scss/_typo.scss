@@ -31,18 +31,9 @@
  * La méthode ci-dessous vise à offrir dans l'ordre de priorité les 3 formats possibles pour
  * assurer la meilleure compatibilité.
  */
-@font-face {
-    font-family: NewsCycle-bold;
-    src:url(../polices/News_Cycle/NewsCycle-bold.woff2)format('woff2'),
-    url(../polices/News_Cycle/NewsCycle-bold.woff) format('woff'),
-    url(../polices/News_Cycle/NewsCycle-bold.ttf) format('truetype');
-}
-@font-face {
-    font-family: NewsCycle;
-    src:url(../polices/News_Cycle/NewsCycle-Regular.woff2)format('woff2'),
-    url(../polices/News_Cycle/NewsCycle-Regular.woff) format('woff'),
-    url(../polices/News_Cycle/NewsCycle-Regular.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
 h1,
 .h1,
 h2,
@@ -51,10 +42,10 @@ h3,
 .h3,
 h4,
 .h4 {
-    font-family: NewsCycle-bold, sans-serif ;
+    font-family: Krona One
 }
 body{
-    font-family: NewsCycle, sans-serif ;
+    font-family: Kanit ;
 }
 
 

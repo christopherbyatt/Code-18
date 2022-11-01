@@ -5,7 +5,7 @@
 </head>
 <body>
 <header class="header" role="banner">
-    <a href="<?php echo $niveau;?>index.php"><img class="header__logo" src="images/logoOff_noir.png" alt="accueil"></a>
+    <a href="<?php echo $niveau;?>index.php"><img class="header__logo" src="<?php echo $niveau;?>images/logoOff_noir.png" alt="accueil"></a>
     <ul class="nav">
         <li class="nav__item"><a class="nav__lien" href="<?php echo $niveau;?>index.php">Le OFF</a></li>
         <li class="nav__item"><a class="nav__lien" href="#">Programmation</a></li>
