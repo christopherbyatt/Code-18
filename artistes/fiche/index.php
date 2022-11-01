@@ -36,7 +36,7 @@
                             FROM ti_evenement
                             INNER JOIN t_lieu ON ti_evenement.id_lieu = t_lieu.id_lieu
                             WHERE id_artiste='. $strIdArtiste.'
-                            ORDER BY `id_lieu` ASC';
+                            ORDER BY `id_lieu` DESC';
 
     //	//Exécution de la requête
     $pdosResultatEvent = $pdoConnexion->query($strReqEventArtiste);
@@ -52,10 +52,6 @@
         if($arrEventArtiste['MINUTES'] == "0") {
             $arrEventArtiste['MINUTES'] = "00";
         }
-
-//        $strAffichageEvent.= "<ul><li>" . $arrEventArtiste['nom_lieu'] . "</li>";
-//        $strAffichageEvent.= "<li>" . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . "</li>";
-//        $strAffichageEvent.= "<li>" . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>" . "</li></ul>";
 
         $strAffichageEvent.=    "<li>" . $arrEventArtiste['nom_lieu'] .
                                 ", " . $arrJours[$arrEventArtiste['JOURNÉE']-1] .
@@ -125,7 +121,6 @@
 </head>
 
 <body>
-<div class="website">
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
 
     <main id="main" role="main" class="main">
@@ -141,7 +136,7 @@
         <a href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
 <!--        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">-->
 
-        <h2 class="description_h2">Description</h2>
+        <h2 class="h2 description_h2">Description</h2>
         <p><?php echo $arrArtistes['description']?></p>
 
         <h2 class="provenance_h2">Provenance</h2>
@@ -158,16 +153,16 @@
 
         <h2 class="h2">Découvrir d'autres artistes</h2>
         <div class="container">
-            <ul class="artistes_ul">
-            <?php
-                for($intCptRandom=0; $intCptRandom<3; $intCptRandom++){ ?>
-                    <img class="artistes_img" style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>
-                <?php } ?>
+            <ul>
+                <?php
+                for($intCptRandom=0; $intCptRandom<3;$intCptRandom++){
+                    echo "<img style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>";
+                };
+                ?>
             </ul>
         </div>
     </main>
     <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
-</div>
 </body>
 
 </html>

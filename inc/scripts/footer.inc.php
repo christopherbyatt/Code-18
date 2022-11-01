@@ -8,13 +8,13 @@
 
     <title>Footer</title>
 </head>
-<footer class="footer" role="contentinfo">
-    <div class="logo-adresse">
-        <img class="logo-adresse__logo" src="../../images/off_jaune.svg" alt="accueil">
-        <p class="logo-adresse__adresse">110 boulevard René-Lévesque Ouest<br>C.P. 48036<br>QC, Québec, G1R 5R5</p>
-    </div>
-    <ul class="footer--nav">
-        <li class="menu__item"><a class="nav__lien">Le OFF</a></li>
+<footer class="footer" role="contentienfo">
+                <div class="logo-adresse">
+                    <img class="logo-adresse__logo" src="../../images/off_jaune.svg" alt="accueil">
+                    <p class="logo-adresse__adresse">110 boulevard René-Lévesque Ouest<br>C.P. 48036<br>QC, Québec, G1R 5R5</p>
+                </div>
+                <ul class="footer--nav">
+                    <li class="menu__item"><a class="nav__lin">Le OFF</a></li>
         <li class="nav__item"><a class="nav__lien">Programmation</a></li>
         <li class="nav__item"><a class="nav__lien">Artistes</a></li>
         <li class="nav__item"><a class="nav__lien">Partenaires</a></li>

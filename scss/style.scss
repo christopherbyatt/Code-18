@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/**
+ * @author COLLECTIF - @TIMCSF
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Menu
+ * Grille
+ * Mise en page
+ *** Contenus principal et complémentaire
+ *** Architecture des CSS (liste de définitions)
+ *** Pied de page
+ */
+
+/* Normalize
+   ========================================================================== */
+@import "normalize";
+
+/* Utilitaires
+   ========================================================================== */
+@import "utilitaires";
+
+/* Charte typographique
+   ========================================================================== */
+@import "typo";
+
+/* Menu
+   ========================================================================== */
+@import "menu";
+
+/* Grille
+   ========================================================================== */
+@import "grille";
+
+/* Mise en page
+   ========================================================================== */
+

@@ -1,20 +1,16 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Header</title>
+    <link rel="stylesheet" href="css/style-christopher.css">
 </head>
-    <header class="header" role="banner">
-        <img class="header__logo" src="../../images/logoOff_noir.png" alt="accueil">
-        <ul class="nav">
-            <li class="nav__item"><a class="nav__lien">Le OFF</a></li>
-            <li class="nav__item"><a class="nav__lien">Programmation</a></li>
-            <li class="nav__item"><a class="nav__lien">Artistes</a></li>
-            <li class="nav__item"><a class="nav__lien">Partenaires</a></li>
-        </ul>
-        <button class="header__btn main__btn" type="button">Acheter mon passeport</button>
-    </header>
-</html>
+<body>
+<header class="header" role="banner">
+    <a href="<?php echo $niveau;?>index.php"><img class="header__logo" src="images/logoOff_noir.png" alt="accueil"></a>
+    <ul class="nav">
+        <li class="nav__item"><a class="nav__lien" href="<?php echo $niveau;?>index.php">Le OFF</a></li>
+        <li class="nav__item"><a class="nav__lien" href="#">Programmation</a></li>
+        <li class="nav__item"><a class="nav__lien" href="<?php echo $niveau;?>artistes/index.php">Artistes</a></li>
+        <li class="nav__item"><a class="nav__lien" href="#">Partenaires</a></li>
+    </ul>
+    <button class="header__btn" type="button">Acheter mon passeport</button>
+</header>

@@ -16,17 +16,16 @@
         <li class="nav__item"><a class="nav__lien">Artistes</a></li>
         <li class="nav__item"><a class="nav__lien">Partenaires</a></li>
     </ul>
-<<<<<<< HEAD
+
     <button class="header__btn" type="button">Acheter mon passeport</button>
 </header>
 <main class="main" role="main">
     <h1 class="titrePrincipal">Liste des artistes</h1>
-=======
+
     <button class="header__btn main__btn" type="button">Acheter mon passeport</button>
 </header>
 <main class="main" role="main">
     <h1 class="titrePrincipal">Liste <br> des <br> artistes</h1>
->>>>>>> c1f7889c350531db55ab0bd36854244b25ef9625
     <section class="artistes">
         <div>
             <figure class="infoArtiste">
@@ -48,30 +47,30 @@
 </main>
 
 <footer class="footer" role="contentinfo">
-<<<<<<< HEAD
+
     <div class="haut">
         <img class="footer__logo" src="../images/off_jaune.svg" alt="accueil">
         <p class="adresse">110 boulevard René-Lévesque Ouest<br>C.P. 48036<br>QC, Québec, G1R 5R5</p>
     </div>
     <ul class="nav">
-=======
+
     <div class="logo-adresse">
         <img class="logo-adresse__logo" src="../images/off_jaune.svg" alt="accueil">
         <p class="logo-adresse__adresse">110 boulevard René-Lévesque Ouest<br>C.P. 48036<br>QC, Québec, G1R 5R5</p>
     </div>
     <ul class="footer--nav">
->>>>>>> c1f7889c350531db55ab0bd36854244b25ef9625
+
         <li class="menu__item"><a class="nav__lien">Le OFF</a></li>
         <li class="nav__item"><a class="nav__lien">Programmation</a></li>
         <li class="nav__item"><a class="nav__lien">Artistes</a></li>
         <li class="nav__item"><a class="nav__lien">Partenaires</a></li>
     </ul>
     <div class="informations">
-<<<<<<< HEAD
+
         <button class="informations__btn" type="button">Acheter mon passeport</button>
-=======
+
         <button class="informations__btn main__btn" type="button">Acheter mon passeport</button>
->>>>>>> c1f7889c350531db55ab0bd36854244b25ef9625
+
         <p class="informations__p">du 6 juillet au 10 juillet 2022</p>
         <a class="information__lien" href="">Formulaire d’abonnement à l’infolettre du festival</a>
         <div class="reseaux">
@@ -84,7 +83,6 @@
 </footer>
 </body>
 </html>
-<<<<<<< HEAD
 
-=======
->>>>>>> c1f7889c350531db55ab0bd36854244b25ef9625
+
+
