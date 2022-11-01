@@ -66,8 +66,10 @@
     $strRequeteArtisteSimilaire =  'SELECT DISTINCT t_artiste.id_artiste, nom_artiste
                                     FROM t_artiste
                                     INNER JOIN ti_style_artiste ON t_artiste.id_artiste=ti_style_artiste.id_artiste
-                                    WHERE id_style IN( SELECT id_style FROM ti_style_artiste
-                                    WHERE id_artiste=' . $strIdArtiste . ') AND ti_style_artiste.id_artiste<>' . $strIdArtiste;
+                                    WHERE id_style IN
+                                          ( SELECT id_style FROM ti_style_artiste
+                                            WHERE id_artiste=' . $strIdArtiste . ') 
+                                            AND ti_style_artiste.id_artiste<>' . $strIdArtiste;
 
     // Exécution de la requête
     $pdosResultatArtistesSim = $pdoConnexion->query($strRequeteArtisteSimilaire);
@@ -143,7 +145,7 @@
         <p><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="styleMusic_h2">Style musical</h2>
-        <p class="h2"><?php echo $arrArtistes['id_style']?>Rock</p>
+        <p class="h2"><?php echo $arrArtistes['nom_style']?>Rock</p>
 
         <h2 class="representation_h2">Représentations</h2>
         <ul>
