@@ -27,10 +27,10 @@
 
     // Requête pour afficher la liste des événements
     $strReqEventArtiste = ' SELECT DISTINCT id_evenement, t_lieu.id_lieu, nom_lieu, date_et_heure, 
+                            DAYOFWEEK(date_et_heure) AS JOURNÉE ,
+                            DAYOFMONTH(date_et_heure) AS JOUR,
                             HOUR(date_et_heure) AS HEURE, 
-                            MINUTE(date_et_heure) AS MINUTES, 
-                            DAYOFWEEK(date_et_heure) AS JOURNÉE , 
-                            DAYOFMONTH(date_et_heure) AS JOUR, 
+                            MINUTE(date_et_heure) AS MINUTES,  
                             MONTH(date_et_heure) AS MOIS, 
                             YEAR(date_et_heure)
                             FROM ti_evenement
@@ -118,6 +118,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fiche "artistes/fiche/index.php</title>
     <link rel="stylesheet" href='../../css/style-michel.css' media="all">
+    <link rel="stylesheet" href='../../css/style.css' media="all">
 </head>
 
 <body>
