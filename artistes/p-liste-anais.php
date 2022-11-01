@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--  <link rel="stylesheet" href="../css/style-anais.css"> -->
     <link rel="stylesheet" href="../css/style-anais.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
 </head>
@@ -24,15 +25,27 @@
     <section class="artistes">
         <div class="ctn-infoArtiste">
             <figure class="infoArtiste">
-                <img class="infoArtiste__img" src="../images/cabaret_olibrius.jpg" alt="Cabaret Olibrius">
-                <figcaption class="infoArtiste__nom nom--un">Cabaret Olibrius</figcaption>
+                <img class="infoArtiste__img" src="../images/placeholder.png" alt="Cabaret Olibrius">
+                <div class="btnImages btnImages--jaune">
+                    <button hidden class="btnImages__plus">+</button>
+                    <button hidden class="btnImages__enSavoirPlus">en savoir +</button>
+                </div>
+                <figcaption class="infoArtiste__nom nom--un"> Cabaret Olibrius</figcaption>
             </figure>
             <figure class="infoArtiste">
-                <img class="infoArtiste__img" src="../images/diamond_rings.jpg" alt="Diamond Rings">
+                <img class="infoArtiste__img" src="../images/placeholder.png" alt="Diamond Rings">
+                <div class="btnImages btnImages--orange">
+                    <button hidden class="btnImages__plus">+</button>
+                    <button hidden class="btnImages__enSavoirPlus">en savoir +</button>
+                </div>
                 <figcaption class="infoArtiste__nom nom--deux">Diamond Rings</figcaption>
             </figure>
             <figure class="infoArtiste">
-                <img class="infoArtiste__img" src="../images/jah_i.jpg" alt="Jah & I">
+                <img class="infoArtiste__img" src="../images/placeholder.png" alt="Jah & I">
+                <div class="btnImages btnImages--bleu">
+                    <button hidden class="btnImages__plus">+</button>
+                    <button hidden class="btnImages__enSavoirPlus">en savoir +</button>
+                </div>
                 <figcaption class="infoArtiste__nom nom--trois">Jah & I</figcaption>
             </figure>
         </div>
@@ -40,7 +53,6 @@
             <button class="arriere" type="button">&#9664;</button>
             <button class="avant" type="button">&#9654;</button>
         </div>
-
     </section>
 </main>
 
@@ -67,6 +79,7 @@
     </div>
     <p class="footer__copyright">© 2009-2022 Festival OFF Tous droits réservés</p>
 </footer>
+<script src="../js/script_liste_artiste.js"></script>
 </body>
 </html>
 

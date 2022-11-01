@@ -90,7 +90,6 @@ body {
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: #057096 3px 3px;
 }
 
 /*SECTION*/
@@ -105,9 +104,8 @@ body {
   padding: 0.5em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  max-width: 100%;
 }
 @media (min-width: 500px) {
   .ctn-infoArtiste {
@@ -117,92 +115,40 @@ body {
   }
 }
 
-.infoArtiste {
-  margin: 0 2px;
-  position: relative;
-}
-@media (min-width: 500px) {
-  .infoArtiste {
-    margin: 2px 0px;
-  }
-}
-
 .infoArtiste__img {
   display: block;
   max-width: 100%;
-  margin: 0 0;
 }
 
-.infoArtiste__nom {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  z-index: 2;
-  max-width: 100%;
-  padding: 0.6em 0;
-}
-
-/*FILTRE DE COULEUR*/
-.infoArtiste__img:hover + .btnImages {
+/*FILTRE JAUNE SUR L'IMAGE
+img:hover+div{
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 215, 0, 0.5);
+  background: rgb(255,215,0, 0.5);
   line-height: 500px;
   font-size: 2em;
   z-index: 3;
 }
 
-.infoArtiste__img:hover + .btnImages--orange {
-  background: rgba(245, 165, 0, 0.5);
-}
-
-.infoArtiste__img:hover + .btnImages--bleu {
-  background: rgba(0, 187, 202, 0.5);
-}
-
-.infoArtiste__img:hover ~ .infoArtiste__nom {
-  position: absolute;
-  top: 45%;
-  left: 30%;
-  display: inline;
-  margin: 0 auto;
-  background: transparent;
-  border: grey solid 2px;
-  color: black;
-  z-index: 4;
-}
-
-.nom--un {
-  background: #FDDC3E;
-}
-
-.nom--deux {
-  background: #F5A500;
-}
-
-.nom--trois {
-  background: #00BBCA;
-}
-
-/*BOUTON "+"*/
-.plus {
+BOUTON "+"
+.plus{
   position: absolute;
   bottom: 5px;
   right: 5px;
   z-index: 4;
   border-radius: 50%;
   border: #00102E solid 1px;
-  font-size: 2em;
+  font-size 2em;
   background: transparent;
   color: #00102E;
 }
 
-/*BOUTON "EN SAVOIR PLUS"*/
-.enSavoirPlus {
+BOUTON "EN SAVOIR PLUS"
+.enSavoirPlus{
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -214,6 +160,27 @@ body {
   text-transform: uppercase;
 }
 
+.nom--un{
+  background: #FDDC3E;
+}
+.nom--deux{
+  background: #F5A500;
+}
+.nom--trois{
+  background: #00BBCA;
+}
+
+DEPLOIEMENT DU NOM
+.infoArtiste__img:hover+.infoArtiste__nom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  line-height: 500px;
+  font-size: 2em;
+}*/
 /** BOUTON DÉFILEMENT **/
 .ctn-btn {
   display: flex;
@@ -260,7 +227,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 2em;
-  margin-top: 2em;
 }
 @media (min-width: 500px) {
   .logo-adresse {
@@ -341,4 +307,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style-anais.css.map */
+/*# sourceMappingURL=style-anais2.css.map */
