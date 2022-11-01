@@ -57,7 +57,10 @@
 //        $strAffichageEvent.= "<li>" . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . "</li>";
 //        $strAffichageEvent.= "<li>" . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>" . "</li></ul>";
 
-        $strAffichageEvent.= "<li>" . $arrEventArtiste['nom_lieu'] . ", " . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . " à " . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>";
+        $strAffichageEvent.=    "<li>" . $arrEventArtiste['nom_lieu'] .
+                                ", " . $arrJours[$arrEventArtiste['JOURNÉE']-1] .
+                                " le " . $arrEventArtiste['JOUR'] . " " . $arrMois[$arrEventArtiste['MOIS']-1] .
+                                " à " . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>";
         $arrEventArtiste=$pdosResultatEvent->fetch();
     }
 
@@ -145,7 +148,8 @@
         <p><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="styleMusic_h2">Style musical</h2>
-        <p class="h2"><?php echo $arrArtistes['nom_style']?>Rock</p>
+<!--        <p class="h2">--><?php //echo $arrArtistes['nom_style']?><!--Rock</p>-->
+        <p class="styleMusic_p">Rock</p>
 
         <h2 class="representation_h2">Représentations</h2>
         <ul>
