@@ -137,7 +137,7 @@
         <a href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
 <!--        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">-->
 
-        <h2 class="h2 description_h2">Description</h2>
+        <h2 class="description_h2">Description</h2>
         <p><?php echo $arrArtistes['description']?></p>
 
         <h2 class="provenance_h2">Provenance</h2>
