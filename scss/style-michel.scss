@@ -1,8 +1,19 @@
-@charset "UTF-8";
 /***************** MISE EN PAGE POUR LE INDEX  */
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+//@import "normalise";
+//@import "utilitaire";
+//@import "typo.css";
+
+
+
 /* Variables pour la largeur de la partie centrale, et pour les espaces latéraux minimums */
+//:root { *Faire l'équivalent avec des variables SASS
+//  --website-width: 1024px;
+//  --spacer-small: 2rem;
+//}
+
 * {
   font-family: "sans-serif", "Kanit";
 }
@@ -18,6 +29,8 @@ body {
 }
 
 /******************** STYLES GÉNÉRAUX ***********************************/
+
+
 /*HEADER*/
 .header {
   height: 500px;
@@ -31,11 +44,9 @@ body {
   align-items: flex-end;
   flex-wrap: wrap;
 }
-
 .header .header__logo {
   width: 30%;
 }
-
 .header .nav {
   list-style-type: none;
   display: flex;
@@ -44,7 +55,6 @@ body {
   align-items: flex-end;
   width: 60%;
 }
-
 .header .header__btn {
   justify-self: flex-end;
   margin: 0 0 1em 1em;
@@ -69,4 +79,3 @@ body {
   text-shadow: #057096 1px 3px;
 }
 
-/*# sourceMappingURL=style-michel.css.map */
