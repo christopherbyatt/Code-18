@@ -53,9 +53,11 @@
             $arrEventArtiste['MINUTES'] = "00";
         }
 
-        $strAffichageEvent.= "<ul><li>" . $arrEventArtiste['nom_lieu'] . "</li>";
-        $strAffichageEvent.= "<li>" . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . "</li>";
-        $strAffichageEvent.= "<li>" . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>" . "</li></ul>";
+//        $strAffichageEvent.= "<ul><li>" . $arrEventArtiste['nom_lieu'] . "</li>";
+//        $strAffichageEvent.= "<li>" . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . "</li>";
+//        $strAffichageEvent.= "<li>" . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>" . "</li></ul>";
+
+        $strAffichageEvent.= "<li>" . $arrEventArtiste['nom_lieu'] . ", " . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . " à " . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>";
         $arrEventArtiste=$pdosResultatEvent->fetch();
     }
 
@@ -122,30 +124,38 @@
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
 
     <main id="main" role="main" class="main">
-        <h1 class="titrePrincipal">Nom Artiste</h1>
-        <a href="">Site Web</a><br>
-        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">
+        <h1 class="titrePrincipal"><?php echo $arrArtistes['nom_artiste'] ?></h1>
+        <ul>
+            <?php
+            for($intCptImg=0; $intCptImg<3;$intCptImg++){
+                echo "<img style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>";
+            };
+            ?>
+        </ul>
+
+        <a href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
+<!--        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">-->
 
         <h2 class="description_h2">Description</h2>
-        <p>La formation 3D KIDS existe depuis 2004. Puriste de punk '77, les 3D KIDS gardent ça simple et droit au but. X (guitare/voix), Y (batterie) et Z (basse) ont deux albums à leur actif (ZYX et Retarded Love) et un troisième est prévu avant la fin de l'année.</p>
+        <p><?php echo $arrArtistes['description']?></p>
 
         <h2 class="provenance_h2">Provenance</h2>
-        <p>Québec</p>
+        <p><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="styleMusic_h2">Style musical</h2>
-        <p class="h2">Rock</p>
+        <p class="h2"><?php echo $arrArtistes['id_style']?>Rock</p>
 
         <h2 class="representation_h2">Représentations</h2>
         <ul>
-            <li>Salle Multi de Méduse, le jeudi 9 juillet à 22h30</li>
-            <li>Salle Multi de Méduse, le vendredi 10 juillet à 23h00</li>
+            <?php echo $strAffichageEvent;?>
         </ul>
+
         <h2 class="h2">Découvrir d'autres artistes</h2>
         <div class="container">
             <ul class="artistes_ul">
             <?php
                 for($intCptRandom=0; $intCptRandom<3; $intCptRandom++){ ?>
-                    <br><img class="artistes_img" style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>
+                    <img class="artistes_img" style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>
                 <?php } ?>
             </ul>
         </div>
