@@ -27,16 +27,16 @@
 
     // Requête pour afficher la liste des événements
     $strReqEventArtiste = ' SELECT DISTINCT id_evenement, t_lieu.id_lieu, nom_lieu, date_et_heure, 
+                            DAYOFWEEK(date_et_heure) AS JOURNÉE ,
+                            DAYOFMONTH(date_et_heure) AS JOUR,
                             HOUR(date_et_heure) AS HEURE, 
-                            MINUTE(date_et_heure) AS MINUTES, 
-                            DAYOFWEEK(date_et_heure) AS JOURNÉE , 
-                            DAYOFMONTH(date_et_heure) AS JOUR, 
+                            MINUTE(date_et_heure) AS MINUTES,  
                             MONTH(date_et_heure) AS MOIS, 
                             YEAR(date_et_heure)
                             FROM ti_evenement
                             INNER JOIN t_lieu ON ti_evenement.id_lieu = t_lieu.id_lieu
                             WHERE id_artiste='. $strIdArtiste.'
-                            ORDER BY `id_lieu` ASC';
+                            ORDER BY `id_lieu` DESC';
 
     //	//Exécution de la requête
     $pdosResultatEvent = $pdoConnexion->query($strReqEventArtiste);
@@ -53,11 +53,10 @@
             $arrEventArtiste['MINUTES'] = "00";
         }
 
-//        $strAffichageEvent.= "<ul><li>" . $arrEventArtiste['nom_lieu'] . "</li>";
-//        $strAffichageEvent.= "<li>" . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . "</li>";
-//        $strAffichageEvent.= "<li>" . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>" . "</li></ul>";
-
-        $strAffichageEvent.= "<li>" . $arrEventArtiste['nom_lieu'] . ", " . $arrJours[$arrEventArtiste['JOURNÉE']-1] . " le " . $arrEventArtiste['MOIS'] . " " . $arrMois[$arrEventArtiste['MOIS']] . " à " . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>";
+        $strAffichageEvent.=    "<li>" . $arrEventArtiste['nom_lieu'] .
+                                ", " . $arrJours[$arrEventArtiste['JOURNÉE']-1] .
+                                " le " . $arrEventArtiste['JOUR'] . " " . $arrMois[$arrEventArtiste['MOIS']-1] .
+                                " à " . $arrEventArtiste['HEURE'] . ":" . $arrEventArtiste['MINUTES'] . "</li>";
         $arrEventArtiste=$pdosResultatEvent->fetch();
     }
 
@@ -119,10 +118,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fiche "artistes/fiche/index.php</title>
     <link rel="stylesheet" href='../../css/style-michel.css' media="all">
+    <link rel="stylesheet" href='../../css/style.css' media="all">
 </head>
 
 <body>
-<div class="website">
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
 
     <main id="main" role="main" class="main">
@@ -145,7 +144,8 @@
         <p><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="styleMusic_h2">Style musical</h2>
-        <p class="h2"><?php echo $arrArtistes['nom_style']?>Rock</p>
+<!--        <p class="h2">--><?php //echo $arrArtistes['nom_style']?><!--Rock</p>-->
+        <p class="styleMusic_p">Rock</p>
 
         <h2 class="representation_h2">Représentations</h2>
         <ul>
@@ -154,16 +154,16 @@
 
         <h2 class="h2">Découvrir d'autres artistes</h2>
         <div class="container">
-            <ul class="artistes_ul">
-            <?php
-                for($intCptRandom=0; $intCptRandom<3; $intCptRandom++){ ?>
-                    <img class="artistes_img" style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>
-                <?php } ?>
+            <ul>
+                <?php
+                for($intCptRandom=0; $intCptRandom<3;$intCptRandom++){
+                    echo "<img style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>";
+                };
+                ?>
             </ul>
         </div>
     </main>
     <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
-</div>
 </body>
 
 </html>
