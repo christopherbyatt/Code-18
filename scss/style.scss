@@ -424,3 +424,89 @@
   width: 50px;
   margin: 0 5px;
 }
+/*SUGGESTIONS D'ARTISTE*/
+.ctn-suggestionArtiste {
+  list-style-type: none;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+@media (min-width: 500px) {
+  .ctn-suggestionArtiste {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.ctn-suggestionArtiste .artisteSugg {
+  position: relative;
+}
+.ctn-suggestionArtiste .artisteSugg .artisteSugg__img {
+  display: block;
+  max-width: 100%;
+}
+.ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap:nth-of-type(1) {
+  background: #FDDC3E;
+}
+.ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap:nth-of-type(2) {
+  background: #f5a500;
+}
+.ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap:nth-of-type(3) {
+  background: #00bbca;
+}
+
+/*LIENS ARTISTES SUGGÉRÉS*/
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #FDDC3E;
+  color: #00102E;
+  text-decoration: none;
+}
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap:hover {
+  text-decoration: underline;
+}
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap:active {
+  background: #00102E;
+  color: #FDDC3E;
+}
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap:focus {
+  border: #00102E solid 3px;
+}
+
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #00102E;
+  color: #FDDC3E;
+  text-decoration: none;
+}
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap:hover {
+  text-decoration: underline;
+}
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap:active {
+  background: #FDDC3E;
+  color: #00102E;
+}
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap:focus {
+  border: #00102E solid 3px;
+}
+
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap .artisteSugg__figcap__lien:active {
+  color: #FDDC3E;
+}
+
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap .artisteSugg__figcap__lien:active {
+  color: #00102E;
+}
