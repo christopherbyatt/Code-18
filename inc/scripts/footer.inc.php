@@ -15,7 +15,7 @@
             <li class="nav__item"><a class="nav__lien" href="#">Programmation</a></li>
             <li class="nav__item"><a class="nav__lien" href="<?php echo $niveau;?>artistes/index.php">Artistes</a></li>
             <li class="nav__item"><a class="nav__lien" href="#">Partenaires</a></li>
-        </ul>rmations">
+        </ul>
 
             <button class="informations__btn" type="button">Acheter mon passeport</button>
 
