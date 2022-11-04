@@ -31,9 +31,12 @@
  * La méthode ci-dessous vise à offrir dans l'ordre de priorité les 3 formats possibles pour
  * assurer la meilleure compatibilité.
  */
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+* {
+    font-family: "sans-serif", "Kanit";
+}
 h1,
 .h1,
 h2,
