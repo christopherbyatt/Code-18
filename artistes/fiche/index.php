@@ -60,6 +60,15 @@
         $arrEventArtiste=$pdosResultatEvent->fetch();
     }
 
+    ///////////////////REQUÊTE STYLE ARTISTE ///////////////////////////////////////
+//    $strRequeteArtisteStyle = '    SELECT nom_style FROM t_style
+//                                   INNER JOIN t_artiste ON t_artiste.id_artiste=t_style=id_style
+//                                   WHERE id_artiste=' . $strIdArtiste;
+//
+//    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
+//
+//    $pdosArtisteStyle->fetch()
+
     ///////////////////REQUÊTE ARTISTE SIMILAIRE///////////////////////////////////////
 
     $strRequeteArtisteSimilaire =  'SELECT DISTINCT t_artiste.id_artiste, nom_artiste
@@ -138,41 +147,28 @@
 <!--        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">-->
 
         <h2 class="description_h2">Description</h2>
-        <p><?php echo $arrArtistes['description']?></p>
+        <p class="textes"><?php echo $arrArtistes['description']?></p>
 
         <h2 class="titreSecondaire">Provenance</h2>
-        <p><?php echo $arrArtistes['provenance']?></p>
+        <p class="textes"><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="titreSecondaire">Style musical</h2>
 <!--        <p class="h2">--><?php //echo $arrArtistes['nom_style']?><!--Rock</p>-->
-        <p class="styleMusic_p">Rock</p>
+        <p class="textes"">Rock</p>
 
         <h2 class="titreSecondaire">Représentations</h2>
         <ul>
             <?php echo $strAffichageEvent;?>
         </ul>
 
-
-
-
         <h2 class="titreSecondaire">Découvrir d'autres artistes</h2>
-        <div class="container">
-            <ul>
-                <?php
-                for($intCptRandom=0; $intCptRandom<3;$intCptRandom++){
-                    echo "<img style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>";
-                };
-                ?>
-            </ul>
-        </div>
-        <h2 class="titreSecondaire">Artistes similaires</h2>
-        <ul>
+        <ul class="ctn-suggestionArtiste">
             <?php
             if(count($arrArtisteChoisi)>0) {
                 for($intCptRandom=0; $intCptRandom<count($arrArtisteChoisi); $intCptRandom++) { ?>
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
-                            <img class="artisteSugg__img" src="<?php echo $niveau;?>images/mini_placeholder.png" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+                            <img class="artisteSugg__img" src="<?php echo $niveau;?>images/mini_placeholder.png" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
                             <figcaption class="artisteSugg__figcap">
                                 <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
                             </figcaption>
