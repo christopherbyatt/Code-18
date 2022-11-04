@@ -140,19 +140,22 @@
         <h2 class="description_h2">Description</h2>
         <p><?php echo $arrArtistes['description']?></p>
 
-        <h2 class="provenance_h2">Provenance</h2>
+        <h2 class="titreSecondaire">Provenance</h2>
         <p><?php echo $arrArtistes['provenance']?></p>
 
-        <h2 class="styleMusic_h2">Style musical</h2>
+        <h2 class="titreSecondaire">Style musical</h2>
 <!--        <p class="h2">--><?php //echo $arrArtistes['nom_style']?><!--Rock</p>-->
         <p class="styleMusic_p">Rock</p>
 
-        <h2 class="representation_h2">Représentations</h2>
+        <h2 class="titreSecondaire">Représentations</h2>
         <ul>
             <?php echo $strAffichageEvent;?>
         </ul>
 
-        <h2 class="h2">Découvrir d'autres artistes</h2>
+
+
+
+        <h2 class="titreSecondaire">Découvrir d'autres artistes</h2>
         <div class="container">
             <ul>
                 <?php
@@ -162,6 +165,24 @@
                 ?>
             </ul>
         </div>
+        <h2 class="titreSecondaire">Artistes similaires</h2>
+        <ul>
+            <?php
+            if(count($arrArtisteChoisi)>0) {
+                for($intCptRandom=0; $intCptRandom<count($arrArtisteChoisi); $intCptRandom++) { ?>
+                    <li class="ctn-suggestionArtiste__item">
+                        <figure class="artisteSugg">
+                            <img class="artisteSugg__img" src="<?php echo $niveau;?>images/mini_placeholder.png" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+                            <figcaption class="artisteSugg__figcap">
+                                <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
+                            </figcaption>
+                        </figure>
+<!--                        --><?php //echo "<br><img style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>"?>
+                    </li> <?php }
+            } else {
+                echo $arrArtisteSug[0];
+            } ?>
+
     </main>
     <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
 </body>
