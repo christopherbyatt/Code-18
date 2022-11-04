@@ -1,4 +1,4 @@
-<<?php
+<?php
 $niveau='./';
 //ini_set('display_errors',1);
 include($niveau . "inc/fragment/config.inc.php");
@@ -101,10 +101,17 @@ for($cpt=0;$cpt<=2;$cpt++){
 </div>
 <div class="main__artiste">
     <h2 class="h2">EN VEDETTES</h2>
-    <ul><?php for($cpt=0;$cpt<count($arrArtistesChoisis);$cpt++){ ?>
-            <li>
-            <a href='<?php echo $niveau;?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"];?></a>
-            </li><?php } ?>
+    <ul class="ctn-suggestionArtiste">
+        <?php for($cpt=0;$cpt<count($arrArtistesChoisis); $cpt++) { ?>
+            <li class="ctn-suggestionArtiste__item">
+                <figure class="artisteSugg">
+                    <img class="artisteSugg__img" src="<?php echo $niveaux;?>images/mini_placeholder.png" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
+                    <figcaption class="artisteSugg__figcap">
+                        <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
+                    </figcaption>
+                </figure>
+            </li>
+        <?php } ?>
     </ul>
     </section>
 
