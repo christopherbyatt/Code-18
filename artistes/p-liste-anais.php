@@ -254,9 +254,9 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
         <p class="informations__p">du 6 juillet au 10 juillet 2022</p>
         <a class="information__lien" href="">Formulaire d’abonnement à l’infolettre du festival</a>
         <div class="reseaux">
-            <a class="reseaux__lien" href="facebook.com"><img class="reseaux__img" src="../images/reseaux/facebook.svg" alt="facebook"></a>
-            <a class="reseaux__lien" href="twitter.com"><img class="reseaux__img" src="../images/reseaux/twitter.svg" alt="twitter"></a>
-            <a class="reseaux__lien" href="youtube.com"><img class="reseaux__img" src="../images/reseaux/youtube.svg" alt="youtube"></a>
+            <a class="reseaux__lien" href="https://www.facebook.com"><img class="reseaux__img" src="../images/reseaux/facebook.svg" alt="facebook"></a>
+            <a class="reseaux__lien" href="https://www.twitter.com"><img class="reseaux__img" src="../images/reseaux/twitter.svg" alt="twitter"></a>
+            <a class="reseaux__lien" href="https://www.youtube.com"><img class="reseaux__img" src="../images/reseaux/youtube.svg" alt="youtube"></a>
         </div>
     </div>
     <p class="footer__copyright">© 2009-2022 Festival OFF Tous droits réservés</p>

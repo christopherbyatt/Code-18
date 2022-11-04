@@ -129,18 +129,22 @@ body{
   outline-offset: -10px;
   text-transform: uppercase;
   &:hover{
-    color: #057096;
-    border: #057096 solid 3px;
-    outline: #057096 solid 3px;
-    background: #fff;
+    color: #FDDC3E;
+    /*border: #057096 solid 3px;
+    outline: #057096 solid 3px;*/
+    background: #00102E;
   }
   &:active{
     font-weight: bolder;
+    text-decoration: underline;
   }
   &:focus{
-    border: #057096 solid 5px;
-    outline: #057096 solid 5px;
-    outline-offset: -13px;
+    border: #00102E solid 5px;
+    outline: none;
+    font-weight: bolder;
+    text-decoration: underline;
+    /*outline: #FDDC3E solid 5px;
+    outline-offset: -13px;*/
   }
 }
 
@@ -151,6 +155,10 @@ body{
   text-transform: uppercase;
   text-align: center;
   text-shadow: #057096 3px 3px;
+}
+.titrePrincipal{
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .titreSecondaire{
   font-size: 2em;
@@ -416,7 +424,7 @@ body{
   align-self: center;
   @media(min-width:500px){
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     flex-wrap: nowrap;
     margin-bottom: 4em;
@@ -454,21 +462,28 @@ body{
     flex: 0 1 40%;
     padding-left: 3em;
   }
+  &__item{
+    width: 35%;
+  }
   &__lien{
     display: block;
     width: 100%;
     text-align: center;
+    color: white;
     @media(min-width: 500px){
       text-align: left;
     }
     &:hover{
-
+      background: rgba(253, 220, 62, 0.5);
+      text-decoration: none;
     }
     &:active{
-
+      background: #FDDC3E;
+      color: #00102E;
     }
     &:focus{
-
+    border: #FDDC3E solid 3px;
+    text-decoration: none;
     }
   }
 }
@@ -510,19 +525,29 @@ body{
   background: transparent;
   outline-offset: -10px;
   text-transform: uppercase;
+  text-decoration: none;
   &:hover{
-    color: #057096;
+    /*color: #057096;
     border: #057096 solid 3px;
     outline: #057096 solid 3px;
-    background: #fff;
+    background: #fff;*/
+    color: #00102E;
+    font-weight: bolder;
+    background: #FDDC3E;
+
   }
   &:active{
     font-weight: bolder;
+    text-decoration: underline;
   }
   &:focus{
-    border: #057096 solid 5px;
+    /*border: #057096 solid 5px;
     outline: #057096 solid 5px;
-    outline-offset: -13px;
+    outline-offset: -13px;*/
+    border: #FDDC3E solid 5px;
+    outline: none;
+    font-weight: bolder;
+    text-decoration: underline;
   }
 }
 
