@@ -109,7 +109,6 @@ body{
   }
   &:focus{
     text-decoration: none;
-    background: rgba(0, 16, 46, 0.3);
     border: #00102E solid 4px;
   }
 }
@@ -145,12 +144,16 @@ body{
   }
 }
 
-.titrePrincipal{
+.titrePrincipal,
+.titreSecondaire{
   font-family: 'Krona One', sans-serif;
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
   text-shadow: #057096 3px 3px;
+}
+.titreSecondaire{
+  font-size: 2em;
 }
 /*SECTION*/
 .artistes{
@@ -176,7 +179,7 @@ body{
 .infoArtiste{
   margin: 2px 0;
   position: relative;
-  border: coral solid 2px;
+  /*border: coral solid 2px;*/
   @media(min-width: 500px){
     margin: 0px 2px;
   }
@@ -197,25 +200,6 @@ body{
   padding: 0 0;
 }
 
-/*FILTRE DE COULEUR*/
-.infoArtiste__img:hover+.btnImages{
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(255,215,0, 0.5);
-  line-height: 500px;
-  font-size: 2em;
-  z-index: 3;
-}
-.infoArtiste__img:hover+.btnImages--orange{
-  background: rgba(245, 165, 0, 0.5);
-}
-.infoArtiste__img:hover+.btnImages--bleu{
-  background: rgba(0, 187, 202, 0.5);
-}
 
 .infoArtiste__img:hover~.infoArtiste__nom{
   position: absolute;
@@ -223,7 +207,7 @@ body{
   left: 0;
   max-width: 100%;
   max-height: 100%;
-  border: green solid 2px;
+  /*border: green solid 2px;*/
   display: block;
   background: transparent;
   color: black;
@@ -232,22 +216,31 @@ body{
 }
 .infoArtiste__nom>a{
   display: block;
-  border: blueviolet solid 2px;
+  /*border: blueviolet solid 2px;*/
   width: 100%;
   height: 100%;
   line-height: 2em;
 }
 
-.nom--un{
+.infoArtiste:nth-of-type(1) .infoArtiste__nom__lien{
   background: #FDDC3E;
 }
-.nom--deux{
-  background: #F5A500;
+.infoArtiste:nth-of-type(2) .infoArtiste__nom__lien{
+  background: #f5a500;
 }
-.nom--trois{
-  background: #00BBCA;
+.infoArtiste:nth-of-type(3) .infoArtiste__nom__lien{
+  background: #00bbca;
 }
 
+.infoArtiste:nth-of-type(1):hover .infoArtiste__nom__lien{
+  background: rgba(253, 220, 62, 0.5);
+}
+.infoArtiste:nth-of-type(2):hover .infoArtiste__nom__lien{
+  background: rgba(245, 165, 0, 0.5);
+}
+.infoArtiste:nth-of-type(3):hover .infoArtiste__nom__lien{
+  background: rgba(0, 187, 202, 0.5);
+}
 
 /** BOUTON DÉFILEMENT **/
 .ctn-btn{
@@ -257,10 +250,131 @@ body{
   align-items: flex-end;
   .arriere,
   .avant{
+    text-decoration: none;
+    display: block;
     background: transparent;
     border: none;
     color: #fff;
     font-size: 2em;
+  }
+}
+
+/*SUGGESTIONS D'ARTISTE*/
+.ctn-suggestionArtiste{
+  list-style-type: none;
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  @media(min-width: 500px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .artisteSugg{
+    position: relative;
+    .artisteSugg__img{
+      display: block;
+      max-width: 100%;
+    }
+    .artisteSugg__figcap{
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      &:nth-of-type(1){
+        background: #FDDC3E;
+      }
+      &:nth-of-type(2){
+        background: #f5a500;
+      }
+      &:nth-of-type(3){
+        background: #00bbca;
+      }
+    }
+  }
+}
+
+/*LIENS ARTISTES SUGGÉRÉS*/
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap{
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #FDDC3E;
+  color: #00102E;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+  &:active{
+    background: #00102E;
+    color: #FDDC3E;
+  }
+  &:focus{
+    border: #00102E solid 3px;
+  }
+}
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap{
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #00102E;
+  color: #FDDC3E;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+  &:active{
+    background: #FDDC3E;
+    color: #00102E;
+  }
+  &:focus{
+    border: #00102E solid 3px;
+  }
+}
+
+.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap .artisteSugg__figcap__lien{
+  &:active{
+    color: #FDDC3E;
+  }
+}
+.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap .artisteSugg__figcap__lien{
+  &:active{
+    color: #00102E;
+  }
+}
+
+
+/*STYLES DE MUSIQUE*/
+.titreSecondaireBis{
+  color: #057096;
+  font-family: 'Krona One', sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.styles{
+  border: #00102E solid 3px;
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 2em;
+  .listeStyle{
+    @media (min-width: 500px) {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .listeStyle__item{
+      @media (min-width: 500px) {
+        flex: 0 1 25%;
+      }
+    }
   }
 }
 
@@ -346,6 +460,15 @@ body{
     text-align: center;
     @media(min-width: 500px){
       text-align: left;
+    }
+    &:hover{
+
+    }
+    &:active{
+
+    }
+    &:focus{
+
     }
   }
 }
