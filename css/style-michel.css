@@ -61,12 +61,16 @@ body {
 }
 
 /**************************** MAIN ******************/
+.main {
+  margin: 0 1.5rem 0 1.5rem;
+}
+
 .titrePrincipal {
   font-family: "Krona One", sans-serif;
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: #057096 1px 3px;
+  text-shadow: #057096 3px 3px;
 }
 
 h2 {
@@ -74,9 +78,12 @@ h2 {
   color: white;
 }
 
+.textes {
+  margin: 1.5rem;
+}
+
 /*************************** ARTISTES SUGGÉRÉS *********/
 .ctn-suggestionArtiste {
-  list-style-type: none;
   padding: 0.5em;
   display: flex;
   flex-direction: column;
@@ -109,15 +116,15 @@ h2 {
 }
 
 .ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap:nth-of-type(1) {
-  background: #FDDC3E;
+  background: rgba(253, 220, 62, 0.5);
 }
 
 .ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap:nth-of-type(2) {
-  background: #f5a500;
+  background: rgba(245, 165, 0, 0.5);
 }
 
 .ctn-suggestionArtiste .artisteSugg .artisteSugg__figcap:nth-of-type(3) {
-  background: #00bbca;
+  background: rgba(0, 187, 202, 0.5);
 }
 
 /****************** LIENS POUR ARTISTES SUGGÉRÉS ***************/
