@@ -168,7 +168,8 @@
                 for($intCptRandom=0; $intCptRandom<count($arrArtisteChoisi); $intCptRandom++) { ?>
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
-                            <img class="artisteSugg__img" src="<?php echo $niveau;?>images/mini_placeholder.png" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+<!--                            <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
+                            <img class="artisteSugg__img" src="<?php echo $niveau;?>/images/mini_placeholder.png" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
                             <figcaption class="artisteSugg__figcap">
                                 <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
                             </figcaption>
