@@ -11,7 +11,7 @@
             <p class="logo-adresse__adresse">110 boulevard René-Lévesque Ouest<br>C.P. 48036<br>QC, Québec, G1R 5R5</p>
         </div>
         <ul class="footer--nav">
-<<<<<<< HEAD
+
             <li class="menu__item"><a class="nav__lien" href="<?php echo $niveau;?>index.php"">Le OFF</a></li>
             <li class="nav__item"><a class="nav__lien" href="#">Programmation</a></li>
             <li class="nav__item"><a class="nav__lien" href="<?php echo $niveau;?>artistes/index.php">Artistes</a></li>
@@ -19,13 +19,13 @@
         </ul>
 
             <button class="informations__btn" type="button">Acheter mon passeport</button>
-=======
+
             <li class="menu__item"><a class="nav__lienFooter" href="<?php echo $niveau;?>index.php"">Le OFF</a></li>
             <li class="nav__item"><a class="nav__lienFooter" href="#">Programmation</a></li>
             <li class="nav__item"><a class="nav__lienFooter" href="<?php echo $niveau;?>artistes/index.php">Artistes</a></li>
             <li class="nav__item"><a class="nav__lienFooter" href="#">Partenaires</a></li>
         </ul>
->>>>>>> 247a25e394cc40697e176834cac0941f7241aaf3
+
 
             <button class="informations__btn main__btn" type="button">Acheter mon passeport</button>
 
