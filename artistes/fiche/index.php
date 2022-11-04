@@ -147,10 +147,9 @@
         <h2>Test pour mettre images principales sur une ligne</h2>
         <ul class="ctn-artistePrincip">
             <li class="ctn-artistePrincip__item">
-                <?php for($intCpt=0;$intCpt<3;$intCpt++){
-                    ?>
+                <?php for($intCpt=0;$intCpt<3;$intCpt++){ ?>
                     <figure class="artistePrincip">
-                        <!--                            <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
+<!--                    <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
                         <img class="artistePrincip__img" src="<?php echo $niveau;?>images/mini_placeholder.png" alt="">
                         <figcaption class="artistePrincip__figcap">
                             <a class="artistePrincip__figcap__lien" href=''><?php echo $arrArtistes['nom_artiste']?></a>
