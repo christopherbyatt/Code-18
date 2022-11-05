@@ -105,9 +105,11 @@ for($cpt=0;$cpt<=2;$cpt++){
         <?php for($cpt=0;$cpt<count($arrArtistesChoisis); $cpt++) { ?>
             <li class="ctn-suggestionArtiste__item">
                 <figure class="artisteSugg">
-                    <img class="artisteSugg__img" src="<?php echo $niveaux;?>images/mini_placeholder.png" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
+                    <source src="<?php echo $niveaux;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w880.jpg" media="(min-width:501px)">
+                    <source src="<?php echo $niveaux;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w440.jpg" media="(max-width:500px)">
+                    <img class="artisteSugg__img" src="<?php echo $niveaux;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w880.jpg" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
                     <figcaption class="artisteSugg__figcap">
-                        <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
+                        <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
                     </figcaption>
                 </figure>
             </li>
