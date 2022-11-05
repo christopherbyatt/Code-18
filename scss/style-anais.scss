@@ -130,8 +130,6 @@ body{
   text-transform: uppercase;
   &:hover{
     color: #FDDC3E;
-    /*border: #057096 solid 3px;
-    outline: #057096 solid 3px;*/
     background: #00102E;
   }
   &:active{
@@ -143,8 +141,6 @@ body{
     outline: none;
     font-weight: bolder;
     text-decoration: underline;
-    /*outline: #FDDC3E solid 5px;
-    outline-offset: -13px;*/
   }
 }
 
@@ -183,72 +179,104 @@ body{
     justify-content: center;
     align-items: center;
   }
-}
-.infoArtiste{
-  margin: 2px 0;
-  position: relative;
-  /*border: coral solid 2px;*/
-  @media(min-width: 500px){
-    margin: 0px 2px;
+  .infoArtiste{
+    margin: 2px 0;
+    position: relative;
+    /*border: coral solid 2px;*/
+    @media(min-width: 500px){
+      margin: 0px 2px;
+    }
+  }
+  .infoArtiste__img{
+    display: block;
+    max-width: 100%;
+    margin: 0 0;
+  }
+  .infoArtiste__nom{
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    padding: 0 0;
+  }
+  .infoArtiste__nom__p{
+    color: white;
+    text-align: center;
   }
 }
-.infoArtiste__img{
-  display: block;
+
+
+/***************************/
+.infoArtiste__img:hover~.infoArtiste__nom {
+  top: 0;
+  left: 0;
   max-width: 100%;
-  margin: 0 0;
+  max-height: 100%;
+  display: block;
+  z-index: 4;
+  text-decoration-line: none;
 }
-.infoArtiste__nom{
-  position: absolute;
-  bottom: 0;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  z-index: 2;
-  width: 100%;
-  padding: 0 0;
-}
-
-
-.infoArtiste__img:hover~.infoArtiste__nom{
+.infoArtiste__nom:hover{
   position: absolute;
   top: 0;
   left: 0;
   max-width: 100%;
   max-height: 100%;
-  /*border: green solid 2px;*/
   display: block;
-  background: transparent;
-  color: black;
   z-index: 4;
   text-decoration-line: none;
 }
-.infoArtiste__nom>a{
-  display: block;
-  /*border: blueviolet solid 2px;*/
-  width: 100%;
-  height: 100%;
-  line-height: 2em;
-}
 
-.infoArtiste:nth-of-type(1) .infoArtiste__nom__lien{
+.ctn-images:nth-of-type(1) .infoArtiste .infoArtiste__nom{
   background: #FDDC3E;
 }
-.infoArtiste:nth-of-type(2) .infoArtiste__nom__lien{
+.ctn-images:nth-of-type(2) .infoArtiste .infoArtiste__nom{
   background: #f5a500;
 }
-.infoArtiste:nth-of-type(3) .infoArtiste__nom__lien{
+.ctn-images:nth-of-type(3) .infoArtiste .infoArtiste__nom{
   background: #00bbca;
 }
 
-.infoArtiste:nth-of-type(1):hover .infoArtiste__nom__lien{
+.ctn-images:nth-of-type(1):hover .infoArtiste .infoArtiste__nom{
   background: rgba(253, 220, 62, 0.5);
 }
-.infoArtiste:nth-of-type(2):hover .infoArtiste__nom__lien{
+.ctn-images:nth-of-type(2):hover .infoArtiste .infoArtiste__nom{
   background: rgba(245, 165, 0, 0.5);
 }
-.infoArtiste:nth-of-type(3):hover .infoArtiste__nom__lien{
+.ctn-images:nth-of-type(3):hover .infoArtiste .infoArtiste__nom{
   background: rgba(0, 187, 202, 0.5);
 }
+
+
+.infoArtiste__nom__lien,
+.infoArtiste__nom__lien:visited{
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 2em;
+  color: #00102E;
+  text-decoration: none;
+  &:hover {
+    color: #00102E;
+    line-height: 20em;
+    text-decoration: underline;
+  }
+  &:active{
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  &:focus{
+    border: #00102E solid 3px;
+  }
+}
+
+
+/****************************/
+
 
 /** BOUTON DÉFILEMENT **/
 .ctn-btn{
@@ -257,7 +285,9 @@ body{
   justify-content: space-between;
   align-items: flex-end;
   .arriere,
-  .avant{
+  .arriere:visited,
+  .avant,
+  .avant:visited{
     text-decoration: none;
     display: block;
     background: transparent;
@@ -265,6 +295,22 @@ body{
     color: #fff;
     font-size: 2em;
   }
+  .arriere:hover,
+  .avant:hover{
+    border: white solid 3px;
+  }
+  .arriere:focus,
+  .avant:focus{
+    color: #FDDC3E;
+    border: #FDDC3E solid 3px;
+  }
+  .arriere:active,
+  .avant:active{
+    background: white;
+    color: #00102E;
+    border: white solid 3px;
+  }
+
 }
 
 /*SUGGESTIONS D'ARTISTE*/
@@ -292,27 +338,23 @@ body{
       position: absolute;
       bottom: 0;
       width: 100%;
-      &:nth-of-type(1){
-        background: #FDDC3E;
-      }
-      &:nth-of-type(2){
-        background: #f5a500;
-      }
-      &:nth-of-type(3){
-        background: #00bbca;
-      }
+      height: 20%;
     }
   }
 }
 
 /*LIENS ARTISTES SUGGÉRÉS*/
-.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap{
+.artisteSugg__figcap .artisteSugg__figcap__lien,
+.artisteSugg__figcap .artisteSugg__figcap__lien:visited{
   display: block;
   width: 100%;
+  height: 100%;
   text-align: center;
   background: #FDDC3E;
   color: #00102E;
   text-decoration: none;
+  line-height: 3em;
+  font-size: 1.4em;
   &:hover{
     text-decoration: underline;
   }
@@ -324,36 +366,27 @@ body{
     border: #00102E solid 3px;
   }
 }
-.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap{
+.artisteSugg__figcap .artisteSugg__figcap__lien,
+.artisteSugg__figcap .artisteSugg__figcap__lien:visited{
   display: block;
   width: 100%;
   text-align: center;
   background: #00102E;
-  color: #FDDC3E;
+  color: white;
   text-decoration: none;
   &:hover{
     text-decoration: underline;
   }
   &:active{
-    background: #FDDC3E;
+    background: white;
     color: #00102E;
   }
   &:focus{
+    background: white;
+    color: #00102E;
     border: #00102E solid 3px;
   }
 }
-
-.ctn-suggestionArtiste__item:nth-of-type(odd) .artisteSugg .artisteSugg__figcap .artisteSugg__figcap__lien{
-  &:active{
-    color: #FDDC3E;
-  }
-}
-.ctn-suggestionArtiste__item:nth-of-type(even) .artisteSugg .artisteSugg__figcap .artisteSugg__figcap__lien{
-  &:active{
-    color: #00102E;
-  }
-}
-
 
 /*STYLES DE MUSIQUE*/
 .titreSecondaireBis{
@@ -366,24 +399,44 @@ body{
 
 .styles{
   border: #00102E solid 3px;
-  width: fit-content;
-  align-self: center;
-  margin-bottom: 2em;
+  width: 50%;
+  text-align: center;
+  margin: 2.5em auto;
   .listeStyle{
+    list-style-type: none;
     @media (min-width: 500px) {
-      list-style-type: none;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap;
     }
-    .listeStyle__item{
+    &__item{
+      font-size: 1.5em;
       @media (min-width: 500px) {
-        flex: 0 1 25%;
+        flex-basis: 20%;
       }
     }
   }
+}
+
+/*LIENS STYLE DE MUSIQUE*/
+.listeStyle__item .listeStyle__lien,
+.listeStyle__item .listeStyle__lien:visited{
+  color: #00102E;
+  &:hover{
+    font-style: italic;
+  }
+  &:active{
+    font-weight: bolder;
+    font-style: unset;
+    background: #00102E;
+    color: #FDDC3E;
+  }
+  &:focus{
+    border: #00102E solid 3px;
+  }
+
 }
 
 
