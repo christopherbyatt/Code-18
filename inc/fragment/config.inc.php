@@ -11,9 +11,9 @@ if ($blnLocal) {
     $strHost = 'localhost';
     $strBD='22_pwem2_off';
     $strUser = '22_pwem2_OFF';
+
     $strPassword= '22_pwem2_OFF_mdp+!2';
 //    $strPassword= '22_pwem2_OFF+!2';
-    error_reporting(E_ALL);
 
 } else {
     $strHost = 'localhost';
