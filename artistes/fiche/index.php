@@ -139,10 +139,10 @@
             <?php
             for($intCptImg=0; $intCptImg<3;$intCptImg++){ ?>
 <!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
-                <img width="200" class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" alt="">
+                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" media="(min-width:501px)">
+                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w440.jpg" media="(max-width:500px)">
+                <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" alt="">
             <?php } ?>
-
-            ?>
         </ul>
 
         <h2>Test pour mettre images principales sur une ligne</h2>
@@ -152,8 +152,8 @@
                     <figure class="artistePrincip">
 <!--                    <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
 <!--                        <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" media="(min-width:501px)">-->
-<!--                        <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
-                        <img width="400" class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCpt;?>__w880.jpg" alt="">
+                        <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" media="(max-width:500px)">
+                        <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCpt;?>__w440.jpg" alt="">
 <!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" alt="--><?php //echo $arrArtistes[$intCpt]["nom_artiste"]; ?><!--">-->
 <!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/mini_placeholder.png" alt="">-->
                         <figcaption class="artistePrincip__figcap">
@@ -190,8 +190,8 @@
                 for($intCptRandom=0; $intCptRandom<count($arrArtisteChoisi); $intCptRandom++) { ?>
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
-<!--                            <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
-                            <img class="artisteSugg__img" src="<?php echo $niveau;?>/images/mini_placeholder.png" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+                            <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w880.jpg" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+<!--                            <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--/images/mini_placeholder.png" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
                             <figcaption class="artisteSugg__figcap">
                                 <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
                             </figcaption>
