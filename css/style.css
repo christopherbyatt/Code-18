@@ -1225,6 +1225,14 @@ h4,
   font-style: italic;
   font-weight: bolder;
 }
+@media (min-width: 600px) {
+  .information__lien .information__lien,
+.information__lien .information__lien:visited,
+.information__lien:visited .information__lien,
+.information__lien:visited .information__lien:visited {
+    padding-left: 30px;
+  }
+}
 
 .reseaux {
   align-self: center;
