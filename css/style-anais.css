@@ -240,6 +240,7 @@ body {
   display: block;
   z-index: 4;
   text-decoration-line: none;
+  font-size: 3em;
 }
 
 .infoArtiste__nom:hover {
@@ -251,6 +252,7 @@ body {
   display: block;
   z-index: 4;
   text-decoration-line: none;
+  font-size: 3em;
 }
 
 .ctn-images:nth-of-type(1) .infoArtiste .infoArtiste__nom {
@@ -290,8 +292,9 @@ body {
 .infoArtiste__nom__lien:hover,
 .infoArtiste__nom__lien:visited:hover {
   color: #00102E;
-  line-height: 20em;
+  line-height: 10em;
   text-decoration: underline;
+  font-weight: bolder;
 }
 .infoArtiste__nom__lien:active,
 .infoArtiste__nom__lien:visited:active {
@@ -306,10 +309,19 @@ body {
 /****************************/
 /** BOUTON DÉFILEMENT **/
 .ctn-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+.ctn-btn .arriere {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.ctn-btn .avant {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 .ctn-btn .arriere,
 .ctn-btn .arriere:visited,
