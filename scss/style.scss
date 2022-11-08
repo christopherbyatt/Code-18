@@ -72,6 +72,7 @@
     width: fit-content;
     align-self: center;
     margin: 0 0;
+    padding-left: 0;
     @media(min-width: 600px) {
       flex-direction: row;
       justify-content: space-between;
@@ -90,6 +91,7 @@
     .nav__lien{
       width: 100%;
       display: inline-block;
+      margin: 0.75rem 0;
       @media(min-width: 600px) {
         display: inline;
       }
@@ -179,6 +181,11 @@
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
+.titrePrincipalh1 {
+  margin: 0.35rem 0;
+}
+
 .titreSecondaire {
   font-size: 2em;
   @media (max-width: 600px) {
@@ -381,12 +388,11 @@
     padding-left: 3em;
   }
   &__item{
-    width: 35%;
+    margin: 0.75em 0;
   }
   &__lien{
     display: block;
     width: 100%;
-    text-align: center;
     color: white;
     @media(min-width: 600px){
       text-align: left;

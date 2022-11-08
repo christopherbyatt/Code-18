@@ -154,7 +154,7 @@
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
 
     <main id="main" role="main" class="main">
-        <h1 class="titrePrincipal"><?php echo $arrArtistes['nom_artiste']?></h1>
+        <h1 class="titrePrincipal titrePrincipalh1 "><?php echo $arrArtistes['nom_artiste']?></h1>
         <ul class="ctn-artistePrincip">
             <?php
             for($intCptImg=0; $intCptImg<2;$intCptImg++){ ?>
