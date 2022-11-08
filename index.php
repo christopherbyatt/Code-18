@@ -74,6 +74,7 @@ for($cpt=0;$cpt<=2;$cpt++){
 <head>
     <link rel="stylesheet" href="<?php $niveau;?>css/style-christopher.css">
     <link rel="stylesheet" href="<?php $niveau;?>css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
 
 </head>
 <body>
