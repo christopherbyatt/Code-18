@@ -137,9 +137,10 @@
         <h1 class="titrePrincipal"><?php echo $arrArtistes['nom_artiste'] ?></h1>
         <ul>
             <?php
-            for($intCptImg=0; $intCptImg<3;$intCptImg++){
-                echo "<img style='padding: 1em' src='https://fakeimg.pl/250/' alt='Artiste:'>";
-            };
+            for($intCptImg=0; $intCptImg<3;$intCptImg++){ ?>
+<!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
+                <img width="200" class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" alt="">
+            <?php } ?>
 
             ?>
         </ul>
@@ -150,7 +151,11 @@
                 <?php for($intCpt=0;$intCpt<3;$intCpt++){ ?>
                     <figure class="artistePrincip">
 <!--                    <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
-                        <img class="artistePrincip__img" src="<?php echo $niveau;?>images/mini_placeholder.png" alt="">
+<!--                        <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" media="(min-width:501px)">-->
+<!--                        <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
+                        <img width="400" class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCpt;?>__w880.jpg" alt="">
+<!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" alt="--><?php //echo $arrArtistes[$intCpt]["nom_artiste"]; ?><!--">-->
+<!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/mini_placeholder.png" alt="">-->
                         <figcaption class="artistePrincip__figcap">
                             <a class="artistePrincip__figcap__lien" href=''><?php echo $arrArtistes['nom_artiste']?></a>
                         </figcaption>
