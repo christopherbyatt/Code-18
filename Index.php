@@ -74,6 +74,7 @@ for($cpt=0;$cpt<=2;$cpt++){
 <head>
     <link rel="stylesheet" href="css/style-christopher.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <header>
@@ -122,5 +123,7 @@ for($cpt=0;$cpt<=2;$cpt++){
 <footer class="footer" role="contentinfo">
     <?php include $niveau . 'inc/scripts/footer.inc.php'; ?>
 </footer>
+<script src="<?php echo $niveau;?>js/script_liste_artiste.js"></script>
+<script src="<?php echo $niveau;?>js/script/menu.js"></script>
 </body>
 </html>
