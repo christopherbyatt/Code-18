@@ -61,13 +61,18 @@
     }
 
     ///////////////////REQUÊTE STYLE ARTISTE ///////////////////////////////////////
-//    $strRequeteArtisteStyle = '    SELECT nom_style FROM t_style
-//                                   INNER JOIN t_artiste ON t_artiste.id_artiste=t_style=id_style
-//                                   WHERE id_artiste=' . $strIdArtiste;
-//
-//    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
-//
-//    $pdosArtisteStyle->fetch()
+    $strRequeteArtisteStyle = '    SELECT nom_style FROM ti_style_artiste
+                                    INNER JOIN t_style ON t_style.id_style=ti_style_artiste.id_style
+                                   WHERE id_artiste=' . $strIdArtiste;
+
+    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
+
+    $arrArtisteStyle = array();
+    for($intCptStyl=0; $ligneRandom=$pdosArtisteStyle->fetch(); $intCptStyl++){
+        $arrArtisteStyle[$intCptStyl]['nom_style']=$ligneRandom['nom_style'];
+    }
+    //On libère la requête
+    $pdosArtisteStyle->closeCursor();
 
     ///////////////////REQUÊTE ARTISTE SIMILAIRE///////////////////////////////////////
 
@@ -175,8 +180,7 @@
         <p class="textes"><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="titreSecondaire">Style musical</h2>
-<!--        <p class="h2">--><?php //echo $arrArtistes['nom_style']?><!--Rock</p>-->
-        <p class="textes"">Rock</p>
+        <p class="textes"><?php echo $arrArtisteStyle[0]['nom_style']?></p>
 
         <h2 class="titreSecondaire">Représentations</h2>
         <ul>
