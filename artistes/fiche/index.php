@@ -140,9 +140,9 @@
 
     <main id="main" role="main" class="main">
         <h1 class="titrePrincipal"><?php echo $arrArtistes['nom_artiste']?></h1>
-        <ul>
+        <ul class="ctn-artistePrincip">
             <?php
-            for($intCptImg=0; $intCptImg<3;$intCptImg++){ ?>
+            for($intCptImg=0; $intCptImg<2;$intCptImg++){ ?>
 <!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
@@ -150,28 +150,7 @@
             <?php } ?>
         </ul>
 
-        <h2>Test pour mettre images principales sur une ligne</h2>
-        <ul class="ctn-artistePrincip">
-            <li class="ctn-artistePrincip__item">
-                <?php for($intCpt=0;$intCpt<3;$intCpt++){ ?>
-                    <figure class="artistePrincip">
-<!--                    <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
-<!--                        <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" media="(min-width:501px)">-->
-                        <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" media="(max-width:500px)">
-                        <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCpt;?>__w440.jpg" alt="">
-<!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" alt="--><?php //echo $arrArtistes[$intCpt]["nom_artiste"]; ?><!--">-->
-<!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/mini_placeholder.png" alt="">-->
-                        <figcaption class="artistePrincip__figcap">
-                            <a class="artistePrincip__figcap__lien" href=''><?php echo $arrArtistes['nom_artiste']?></a>
-                        </figcaption>
-                    </figure>
-                    <!--                        --><?php //echo "<br><img style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>"?>
-                <?php } ?>
-            </li>
-        </ul>
-
         <a href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
-<!--        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">-->
 
         <h2 class="titreSecondaire">Description</h2>
         <p class="textes"><?php echo $arrArtistes['description']?></p>

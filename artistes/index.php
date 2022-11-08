@@ -133,7 +133,7 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
     <img class="header__logo" src="../images/logoOff_bleu_fonce.svg" alt="accueil">
     <ul class="nav">
         <li class="nav__item nav__item--un">
-            <a href="../Index.php" class="nav__lien">Le OFF</a>
+            <a href="../index.php" class="nav__lien">Le OFF</a>
         </li>
         <li class="nav__item nav__item--deux">
             <a href="" class="nav__lien">Programmation</a>

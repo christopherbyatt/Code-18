@@ -73,6 +73,15 @@ body {
   text-shadow: #057096 3px 3px;
 }
 
+.titreSecondaire {
+  width: 700px;
+}
+@media (max-width: 600px) {
+  .titreSecondaire {
+    width: 290px;
+  }
+}
+
 h2 {
   background-color: #00102E;
   color: white;
@@ -92,9 +101,9 @@ h2 {
   max-width: 100%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 700px) {
   .ctn-artistePrincip {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
