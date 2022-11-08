@@ -162,7 +162,7 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
                     <figure class="infoArtiste">
                         <img class="infoArtiste__img" src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_2__w440.jpg" alt="<?php echo $arrNoms[$intCpt]["nom_artiste"] ?>">
                         <figcaption class="infoArtiste__nom">
-                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/p-fiche-prenom.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
+                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/index.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
                         </figcaption>
                     </figure>
                     <p class="infoArtiste__nom__p">Style(s): <?php echo $arrNoms[$intCpt]["artiste_style"]; ?></p>

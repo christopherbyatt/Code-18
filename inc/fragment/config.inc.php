@@ -15,11 +15,12 @@ if ($blnLocal) {
     error_reporting(E_ALL);
 
 } else {
-    $strHost = 'timunix2.cegep-ste-foy.qc.ca';
-    $strBD='22_pwem2_off';
+    $strHost = 'localhost';
+    $strBD='22_pwem2_OFF';
     $strUser = 'etudiantsPWEM2';
     $strPassword = 't1M582+=$yy';
-    error_reporting(E_ALL & ~E_NOTICE);
+    error_reporting(E_ALL);
+    //error_reporting(E_ALL & ~E_NOTICE);
 }
 
 //Data Source Name pour l'objet PDO

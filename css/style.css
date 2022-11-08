@@ -740,7 +740,7 @@ h4,
   justify-content: space-between;
   align-items: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .header {
     flex-direction: row;
     justify-content: flex-start;
@@ -753,7 +753,7 @@ h4,
   display: block;
   max-width: 100%;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .header .header__logo {
     width: 40%;
   }
@@ -769,7 +769,7 @@ h4,
   align-self: center;
   margin: 0 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .header .nav {
     flex-direction: row;
     justify-content: space-between;
@@ -783,7 +783,7 @@ h4,
   text-align: center;
   position: relative;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .header .nav .nav__item {
     flex: 0 1 25%;
   }
@@ -792,7 +792,7 @@ h4,
   width: 100%;
   display: inline-block;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .header .nav .nav__lien {
     display: inline;
   }
@@ -945,7 +945,7 @@ h4,
   align-items: center;
   max-width: 100%;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .ctn-suggestionArtiste {
     flex-direction: row;
     justify-content: center;
@@ -1030,7 +1030,7 @@ h4,
   align-items: flex-start;
   flex-wrap: wrap;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
@@ -1042,7 +1042,7 @@ h4,
   flex: 1 0 100%;
   text-align: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .footer .footer__copyright {
     margin-top: 3em;
   }
@@ -1059,7 +1059,7 @@ h4,
   margin-top: 2em;
   align-self: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .logo-adresse {
     flex-direction: row;
     justify-content: space-around;
@@ -1075,7 +1075,7 @@ h4,
   font-size: 1.5em;
   margin: 0 10px;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .logo-adresse .logo-adresse__logo {
     /*padding: 1.5em;*/
     align-self: center;
@@ -1088,7 +1088,7 @@ h4,
   margin-bottom: 0px;
   text-align: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .logo-adresse .logo-adresse__adresse {
     text-align: left;
     margin-right: 5px;
@@ -1101,7 +1101,7 @@ h4,
   align-self: center;
   padding-left: 0;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .footerNav {
     flex: 0 1 40%;
     padding-left: 3em;
@@ -1116,7 +1116,7 @@ h4,
   text-align: center;
   color: white;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .footerNav__lien {
     text-align: left;
   }
@@ -1140,7 +1140,7 @@ h4,
   justify-content: center;
   align-items: flex-start;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .informations {
     flex: 0 1 40%;
   }
@@ -1149,7 +1149,7 @@ h4,
   display: inline-block;
   text-align: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .informations .information__lien {
     display: inline;
   }
@@ -1170,8 +1170,6 @@ h4,
   font-size: inherit;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 13em;
-  height: 2em;
   padding: 1em;
   background: transparent;
   outline-offset: -10px;
@@ -1231,7 +1229,7 @@ h4,
   align-items: center;
   margin-top: 1em;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .reseaux {
     flex-direction: row;
     justify-content: flex-end;
@@ -1241,7 +1239,7 @@ h4,
 .reseaux__lien {
   display: inline-block;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .reseaux__lien {
     display: inline;
   }

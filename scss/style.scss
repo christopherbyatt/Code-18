@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  @media(min-width: 500px){
+  @media(min-width: 600px){
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -58,7 +58,7 @@
     margin: 0 5px;
     display: block;
     max-width: 100%;
-    @media(min-width: 500px) {
+    @media(min-width: 600px) {
       width: 40%;
     }
   }
@@ -72,7 +72,7 @@
     width: fit-content;
     align-self: center;
     margin: 0 0;
-    @media(min-width: 500px) {
+    @media(min-width: 600px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
@@ -83,14 +83,14 @@
     .nav__item{
       text-align: center;
       position: relative;
-      @media(min-width: 500px) {
+      @media(min-width: 600px) {
         flex: 0 1 25%;
       }
     }
     .nav__lien{
       width: 100%;
       display: inline-block;
-      @media(min-width: 500px) {
+      @media(min-width: 600px) {
         display: inline;
       }
     }
@@ -236,7 +236,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  @media(min-width: 500px) {
+  @media(min-width: 600px) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -312,7 +312,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  @media(min-width: 500px){
+  @media(min-width: 600px){
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -321,7 +321,7 @@
   .footer__copyright{
     flex: 1 0 100%;
     text-align: center;
-    @media(min-width: 500px){
+    @media(min-width: 600px){
       margin-top: 3em;
     }
   }
@@ -337,7 +337,7 @@
   margin-bottom: 1em;
   margin-top: 2em;
   align-self: center;
-  @media(min-width:500px){
+  @media(min-width:600px){
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
@@ -350,7 +350,7 @@
     max-width: 100%;
     font-size: 1.5em;
     margin: 0 10px;
-    @media(min-width: 500px){
+    @media(min-width: 600px){
       /*padding: 1.5em;*/
       align-self: center;
       margin-right: 5px;
@@ -361,7 +361,7 @@
     margin-left: 5px;
     margin-bottom: 0px;
     text-align: center;
-    @media(min-width: 500px){
+    @media(min-width: 600px){
       text-align: left;
       margin-right: 5px;
     }
@@ -373,7 +373,7 @@
   list-style-type: none;
   align-self: center;
   padding-left: 0;
-  @media(min-width: 500px){
+  @media(min-width: 600px){
     flex: 0 1 40%;
     padding-left: 3em;
   }
@@ -385,7 +385,7 @@
     width: 100%;
     text-align: center;
     color: white;
-    @media(min-width: 500px){
+    @media(min-width: 600px){
       text-align: left;
     }
     &:hover{
@@ -407,13 +407,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     flex: 0 1 40%;
   }
   .information__lien{
     display: inline-block;
     text-align: center;
-    @media(min-width: 500px) {
+    @media(min-width: 600px) {
       display: inline;
     }
   }
@@ -434,8 +434,6 @@
   font-size: inherit;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 13em;
-  height: 2em;
   padding: 1em;
   background: transparent;
   outline-offset: -10px;
@@ -489,14 +487,14 @@
   justify-content: center;
   align-items: center;
   margin-top: 1em;
-  @media(min-width: 500px){
+  @media(min-width: 600px){
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
   }
   &__lien{
     display: inline-block;
-    @media(min-width: 500px) {
+    @media(min-width: 600px) {
       display: inline;
     }
   }
