@@ -133,20 +133,16 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
     <img class="header__logo" src="../images/logoOff_bleu_fonce.svg" alt="accueil">
     <ul class="nav">
         <li class="nav__item nav__item--un">
-            <a href="" class="nav__lien">Le OFF</a>
-
+            <a href="../Index.php" class="nav__lien">Le OFF</a>
         </li>
         <li class="nav__item nav__item--deux">
             <a href="" class="nav__lien">Programmation</a>
-
         </li>
         <li class="nav__item nav__item--trois">
-            <a href="" class="nav__lien">Artistes</a>
-
+            <a href="index.php" class="nav__lien">Artistes</a>
         </li>
         <li class="nav__item nav__item--quatre">
             <a href="" class="nav__lien">Partenaires</a>
-
         </li>
     </ul>
     <button class="header__btn main__btn" type="button">Acheter mon passeport</button>
@@ -164,12 +160,9 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
             <?php for($intCpt=0;$intCpt<count($arrNoms);$intCpt++){ ?>
                 <div class="ctn-images">
                     <figure class="infoArtiste">
-                        <!--<p class="infoArtiste__nom__p">Style(s): <?php echo $arrNoms[$intCpt]["artiste_style"]; ?></p>-->
-                        <img class="infoArtiste__img" src="../images/placeholder.png" alt="<?php echo $arrNoms[$intCpt]["nom_artiste"] ?>">
-                        <!--<div class="btnImages "></div>-->
-                        <figcaption class="infoArtiste__nom"> <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/p-fiche-prenom.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?><!<--Cabaret Olibrius-->
-                                <!--<span class="infoArtiste__nom__span">Style(s): <?php echo $arrNoms[$intCpt]["artiste_style"]; ?></span>-->
-                            </a>
+                        <img class="infoArtiste__img" src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_2__w440.jpg" alt="<?php echo $arrNoms[$intCpt]["nom_artiste"] ?>">
+                        <figcaption class="infoArtiste__nom">
+                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/p-fiche-prenom.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
                         </figcaption>
                     </figure>
                     <p class="infoArtiste__nom__p">Style(s): <?php echo $arrNoms[$intCpt]["artiste_style"]; ?></p>
@@ -181,11 +174,11 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
             if($idStyle==0){
                 if($id_page>1){
                     ?>
-                    <a href='p-liste-anais.php?id_page=<?php echo ($id_page-1); ?>' class="arriere" >&#9664;</a>
+                    <a href='index.php?id_page=<?php echo ($id_page-1); ?>' class="arriere" >&#9664;</a>
                 <?php }
             } else { ?>
 
-                <a href='p-liste-anais.php?id_page=<?php echo ($id_page-1); ?>&id_style=<?php echo $idStyle; ?>' class="arriere" >&#9664;</a>
+                <a href='index.php?id_page=<?php echo ($id_page-1); ?>&id_style=<?php echo $idStyle; ?>' class="arriere" >&#9664;</a>
             <?php }
             ?>
 
@@ -193,10 +186,10 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
             if($idStyle==0){
                 if($id_page<$nbPages){
                     ?>
-                    <a href='p-liste-anais.php?id_page=<?php echo ($id_page+1); ?>' class="avant">&#9654;</a>
+                    <a href='index.php?id_page=<?php echo ($id_page+1); ?>' class="avant">&#9654;</a>
                 <?php }
             } else { ?>
-                <a href='p-liste-anais.php?id_page=<?php echo ($id_page+1); ?>&id_style=<?php echo $idStyle; ?>' class="avant">&#9654;</a>
+                <a href='index.php?id_page=<?php echo ($id_page+1); ?>&id_style=<?php echo $idStyle; ?>' class="avant">&#9654;</a>
             <?php }
             ?>
         </div>
@@ -208,9 +201,9 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
         <?php for($cpt=0;$cpt<count($arrArtistesChoisis); $cpt++) { ?>
             <li class="ctn-suggestionArtiste__item">
                 <figure class="artisteSugg">
-                    <img class="artisteSugg__img" src="../images/mini_placeholder.png" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
+                    <img class="artisteSugg__img" src="../images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_3__w280.jpg" <!--src="../images/mini_placeholder.png"--> alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
                     <figcaption class="artisteSugg__figcap">
-                        <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
+                        <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
                     </figcaption>
                 </figure>
             </li>
