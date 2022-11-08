@@ -32,11 +32,11 @@ body {
 }
 
 .titreSecondaire {
-  width: 700px;
+  width: 750px;
 }
 @media (max-width: 600px) {
   .titreSecondaire {
-    width: 290px;
+    width: 100%;
   }
 }
 
@@ -73,6 +73,7 @@ h2 {
 .ctn-artistePrincip .artistePrincip .artistePrincip__img {
   display: block;
   max-width: 100%;
+  padding: 20em;
 }
 
 .ctn-artistePrincip .artistePrincip .artistePrincip__figcap {

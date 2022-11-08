@@ -61,18 +61,33 @@
     }
 
     ///////////////////REQUÊTE STYLE ARTISTE ///////////////////////////////////////
-    $strRequeteArtisteStyle = '    SELECT nom_style FROM ti_style_artiste
-                                    INNER JOIN t_style ON t_style.id_style=ti_style_artiste.id_style
-                                   WHERE id_artiste=' . $strIdArtiste;
+//    $strRequeteArtisteStyle = '    SELECT nom_style FROM ti_style_artiste
+//                                    INNER JOIN t_style ON t_style.id_style=ti_style_artiste.id_style
+//                                   WHERE id_artiste=' . $strIdArtiste;
+//
+//    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
+//
+//    $arrArtisteStyle = array();
+//    for($intCptStyl=0; $ligneRandom=$pdosArtisteStyle->fetch(); $intCptStyl++){
+//        $arrArtisteStyle[$intCptStyl]['nom_style']=$ligneRandom['nom_style'];
+//    }
+//    //On libère la requête
+//    $pdosArtisteStyle->closeCursor();
 
-    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
+    $strRequeteNomStyle = 'SELECT DISTINCT t_style.id_style, nom_style, t_artiste.id_artiste
+                           FROM t_style
+                           INNER JOIN ti_style_artiste ON t_style.id_style=ti_style_artiste.id_style
+                           INNER JOIN t_artiste ON ti_style_artiste.id_artiste = t_artiste.id_artiste
+                           WHERE t_artiste.id_artiste=' . $strIdArtiste;
 
-    $arrArtisteStyle = array();
-    for($intCptStyl=0; $ligneRandom=$pdosArtisteStyle->fetch(); $intCptStyl++){
-        $arrArtisteStyle[$intCptStyl]['nom_style']=$ligneRandom['nom_style'];
-    }
-    //On libère la requête
-    $pdosArtisteStyle->closeCursor();
+    //Extraction de l'enregistrements de la BD
+    $strRequeteNomStyle = $pdoConnexion->query($strRequeteNomStyle);
+    $arrNomStyle = array();
+    //Extraction des enregistrements à afficher de la BD
+    for($intCptEnrStyle=0;$ligne = $strRequeteNomStyle->fetch();$intCptEnrStyle++){
+        $arrNomStyle[$intCptEnrStyle]['id_style']=$ligne['id_style'];
+        $arrNomStyle[$intCptEnrStyle]['nom_style']=$ligne['nom_style'];
+}
 
     ///////////////////REQUÊTE ARTISTE SIMILAIRE///////////////////////////////////////
 
@@ -159,7 +174,10 @@
         <p class="textes"><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="titreSecondaire">Style musical</h2>
-        <p class="textes"><?php echo $arrArtisteStyle[0]['nom_style']?></p>
+        <p class="textes"><?php
+            for ($cptStyle = 0;$cptStyle < count($arrNomStyle);$cptStyle++){
+                echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php } ?></p>
+        <!--        <p class="textes">--><?php //echo $arrArtisteStyle[0]['nom_style']?><!--</p>-->
 
         <h2 class="titreSecondaire">Représentations</h2>
         <ul>
