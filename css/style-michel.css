@@ -35,10 +35,17 @@ body {
 h2 {
   background-color: #00102E;
   color: white;
+  margin: auto;
 }
 
 .textes {
-  margin: 1.5rem;
+  margin: auto;
+  width: 725px;
+}
+@media (max-width: 600px) {
+  .textes {
+    width: 100%;
+  }
 }
 
 /*************************** ARTISTE CHOISI *************/

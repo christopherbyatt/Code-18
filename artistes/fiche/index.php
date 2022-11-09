@@ -157,7 +157,7 @@
         <h1 class="titrePrincipal titrePrincipalh1 "><?php echo $arrArtistes['nom_artiste']?></h1>
         <ul class="ctn-artistePrincip">
             <?php
-            for($intCptImg=0; $intCptImg<2;$intCptImg++){ ?>
+            for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){ ?>
 <!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
@@ -180,7 +180,7 @@
         <!--        <p class="textes">--><?php //echo $arrArtisteStyle[0]['nom_style']?><!--</p>-->
 
         <h2 class="titreSecondaire">Représentations</h2>
-        <ul>
+        <ul class="textes">
             <?php echo $strAffichageEvent;?>
         </ul>
 
