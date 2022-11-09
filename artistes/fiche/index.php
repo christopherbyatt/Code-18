@@ -156,6 +156,7 @@
     <main id="main" role="main" class="main">
         <h1 class="titrePrincipal titrePrincipalh1 "><?php echo $arrArtistes['nom_artiste']?></h1>
         <ul class="ctn-artistePrincip">
+            <a class="textes" href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
             <?php
             for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){ ?>
 <!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
@@ -164,8 +165,6 @@
                 <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" alt="<?php echo "image de ". $arrArtistes['nom_artiste'];?>">
             <?php } ?>
         </ul>
-
-        <a href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
 
         <h2 class="titreSecondaire">Description</h2>
         <p class="textes"><?php echo $arrArtistes['description']?></p>
