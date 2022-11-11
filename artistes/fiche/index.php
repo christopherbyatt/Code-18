@@ -167,19 +167,19 @@
         </ul>
 
         <h2 class="titreSecondaire">Description</h2>
-        <p class="textes"><?php echo $arrArtistes['description']?></p>
+        <p class="titreSecondaire__p"><?php echo $arrArtistes['description']?></p>
 
         <h2 class="titreSecondaire">Provenance</h2>
-        <p class="textes"><?php echo $arrArtistes['provenance']?></p>
+        <p class="titreSecondaire__p"><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="titreSecondaire">Style musical</h2>
-        <p class="textes"><?php
+        <p class="titreSecondaire__p"><?php
             for ($cptStyle = 0;$cptStyle < count($arrNomStyle);$cptStyle++){
                 echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php } ?></p>
         <!--        <p class="textes">--><?php //echo $arrArtisteStyle[0]['nom_style']?><!--</p>-->
 
         <h2 class="titreSecondaire">Représentations</h2>
-        <ul class="textes">
+        <ul class="titreSecondaire__p">
             <?php echo $strAffichageEvent;?>
         </ul>
 

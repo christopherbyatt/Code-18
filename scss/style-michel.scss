@@ -90,13 +90,14 @@ h2 {
   }
 }
 
-.textes{
+.textes .titreSecondaire__p{
   margin: auto;
   width: 725px;
   @media (max-width: 600px) {
     width: 100%;
   }
 }
+
 
 /*************************** ARTISTE CHOISI *************/
 .ctn-artistePrincip {

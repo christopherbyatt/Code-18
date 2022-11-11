@@ -45,12 +45,12 @@ h2 {
   }
 }
 
-.textes {
+.textes .titreSecondaire__p {
   margin: auto;
   width: 725px;
 }
 @media (max-width: 600px) {
-  .textes {
+  .textes .titreSecondaire__p {
     width: 100%;
   }
 }
