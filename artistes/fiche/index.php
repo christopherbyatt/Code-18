@@ -149,9 +149,8 @@
     <link rel="stylesheet" href='../../css/style-michel.css' media="all">
     <link rel="stylesheet" href='../../css/style.css' media="all">
 </head>
-
+<a href="#main" class="screen-reader-only focusable">Allez au contenu</a>
 <body class="conteneur">
-    <a href="#contenu" class="screen-reader-only focusable">Allez au contenu</a>
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
     <main id="main" role="main" class="main">
         <h1 class="focusable titrePrincipal titrePrincipalh1"><?php echo $arrArtistes['nom_artiste']?></h1>
@@ -188,18 +187,16 @@
             <?php
             if(count($arrArtisteChoisi)>0) {
                 for($intCptRandom=0; $intCptRandom<count($arrArtisteChoisi); $intCptRandom++) { ?>
-                <a class="" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'>
+                <a class="" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>' aria-label="Accéder à la fiche de l'artiste: <?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]?>">
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
                             <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w440.jpg" media="(min-width:501px)">
                             <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" media="(max-width:500px)">
                             <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
-<!--                            <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--/images/mini_placeholder.png" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
                             <figcaption class="artisteSugg__figcap">
                                 <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
                             </figcaption>
                         </figure>
-<!--                        --><?php //echo "<br><img style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>"?>
                     </li>
                 </a> <?php }
             } else {
@@ -207,7 +204,7 @@
             } ?>
         </ul>
     </main>
-    <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
+    <footer role="contentinfo"><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
 </body>
 
 </html>

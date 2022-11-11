@@ -28,16 +28,18 @@ body {
   line-height: 1.5;
 }
 
+a{
+  font-size: 1.8rem;
+}
+
 a:link,
 a:visited {
-  //color: blue;
   text-decoration: none;
   color: lightblue;
   transition: all 0.2s linear;
 }
 a:hover,
 a:active {
-  //color: blue;
   color: #057096;
   text-decoration: underline;
 }

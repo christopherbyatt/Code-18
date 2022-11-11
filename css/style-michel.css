@@ -17,6 +17,10 @@ body {
   line-height: 1.5;
 }
 
+a {
+  font-size: 1.8rem;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
