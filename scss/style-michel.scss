@@ -28,18 +28,18 @@ body {
   line-height: 1.5;
 }
 
-a{
+.artistePrincip__a{
   font-size: 1.8rem;
 }
 
-a:link,
-a:visited {
+.artistePrincip__a:link,
+.artistePrincip__a:visited {
   text-decoration: none;
   color: lightblue;
   transition: all 0.2s linear;
 }
-a:hover,
-a:active {
+.artistePrincip__a:hover,
+.artistePrincip__a:active {
   color: #057096;
   text-decoration: underline;
 }
