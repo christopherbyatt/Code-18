@@ -60,20 +60,6 @@
         $arrEventArtiste=$pdosResultatEvent->fetch();
     }
 
-    ///////////////////REQUÊTE STYLE ARTISTE ///////////////////////////////////////
-//    $strRequeteArtisteStyle = '    SELECT nom_style FROM ti_style_artiste
-//                                    INNER JOIN t_style ON t_style.id_style=ti_style_artiste.id_style
-//                                   WHERE id_artiste=' . $strIdArtiste;
-//
-//    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
-//
-//    $arrArtisteStyle = array();
-//    for($intCptStyl=0; $ligneRandom=$pdosArtisteStyle->fetch(); $intCptStyl++){
-//        $arrArtisteStyle[$intCptStyl]['nom_style']=$ligneRandom['nom_style'];
-//    }
-//    //On libère la requête
-//    $pdosArtisteStyle->closeCursor();
-
     $strRequeteNomStyle = 'SELECT DISTINCT t_style.id_style, nom_style, t_artiste.id_artiste
                            FROM t_style
                            INNER JOIN ti_style_artiste ON t_style.id_style=ti_style_artiste.id_style
@@ -150,7 +136,7 @@
     <link rel="stylesheet" href='../../css/style.css' media="all">
 </head>
 <a href="#main" class="screen-reader-only focusable">Allez au contenu</a>
-<body class="conteneur">
+<body class="">
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
     <main id="main" role="main" class="main">
         <h1 class="focusable titrePrincipal titrePrincipalh1"><?php echo $arrArtistes['nom_artiste']?></h1>
