@@ -176,9 +176,11 @@
                 <a class="" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>' aria-label="Accéder à la fiche de l'artiste: <?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]?>">
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
-                            <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w440.jpg" media="(min-width:501px)">
-                            <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" media="(max-width:500px)">
-                            <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+                            <picture>
+                                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w440.jpg" media="(min-width:501px)">
+                                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" media="(max-width:500px)">
+                                <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
+                            </picture>
                             <figcaption class="artisteSugg__figcap">
                                 <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
                             </figcaption>
