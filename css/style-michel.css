@@ -17,6 +17,19 @@ body {
   line-height: 1.5;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: lightblue;
+  transition: all 0.2s linear;
+}
+
+a:hover,
+a:active {
+  color: #057096;
+  text-decoration: underline;
+}
+
 /******************** STYLES GÉNÉRAUX ***********************************/
 /**************************** MAIN ******************/
 .main {

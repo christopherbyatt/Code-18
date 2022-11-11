@@ -28,6 +28,20 @@ body {
   line-height: 1.5;
 }
 
+a:link,
+a:visited {
+  //color: blue;
+  text-decoration: none;
+  color: lightblue;
+  transition: all 0.2s linear;
+}
+a:hover,
+a:active {
+  //color: blue;
+  color: #057096;
+  text-decoration: underline;
+}
+
 /******************** STYLES GÉNÉRAUX ***********************************/
 
 
@@ -88,6 +102,10 @@ h2 {
   @media (min-width: 600px) {
     margin: auto;
   }
+}
+
+.artistePrincip__a{
+  //display: none;
 }
 
 .textes, .titreSecondaire__p{
