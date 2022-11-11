@@ -12,10 +12,13 @@ body{
   margin: 0;
   width: 100%;
 }
-
+/*HEADER*/
+.nav__item {
+  margin: .5em 0;
+}
 
 /*HEADER*/
-.header{
+/*.header{
   height: 500px;
   max-width: 100%;
   background: #FDDC3E;
@@ -79,7 +82,7 @@ body{
   }
 }
 
-/* MENUS DÉPLIANT */
+!* MENUS DÉPLIANT *!
 .nav__item ul .screen-reader-only{
   list-style-type: none;
   padding-left: 0;
@@ -113,7 +116,7 @@ body{
   }
 }
 
-/* BOUTON - HEADER */
+!* BOUTON - HEADER *!
 .header__btn,
 .header__btn:visited{
   align-self: center;
@@ -142,7 +145,9 @@ body{
     font-weight: bolder;
     text-decoration: underline;
   }
-}
+}*/
+
+
 
 .titrePrincipal,
 .titreSecondaire{
@@ -174,7 +179,7 @@ body{
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  @media(min-width: 500px) {
+  @media(min-width: 600px) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -183,7 +188,7 @@ body{
     margin: 2px 0;
     position: relative;
     /*border: coral solid 2px;*/
-    @media(min-width: 500px){
+    @media(min-width: 600px){
       margin: 0px 2px;
     }
   }
@@ -334,7 +339,7 @@ body{
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  @media(min-width: 500px) {
+  @media(min-width: 600px) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -416,7 +421,8 @@ body{
   margin: 2.5em auto;
   .listeStyle{
     list-style-type: none;
-    @media (min-width: 500px) {
+    padding-left: 0;
+    @media (min-width: 600px) {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -425,7 +431,14 @@ body{
     }
     &__item{
       font-size: 1.5em;
-      @media (min-width: 500px) {
+      margin: .5em 0;
+      @media (min-width: 600px) {
+        flex-basis: 50%;
+      }
+      @media (min-width: 800px) {
+        flex-basis: 30%;
+      }
+      @media (min-width: 1000px) {
         flex-basis: 20%;
       }
     }
@@ -452,7 +465,39 @@ body{
 }
 
 
-/**** FOOTER ****/
+/* BOUTON - FOOTER */
+.informations__btn,
+.informations__btn:visited{
+  width: fit-content;
+  height: fit-content;
+}
+
+/*NAVIGATION*/
+.footerNav{
+  &__item{
+    width: fit-content;
+    margin: .5em 0;
+    @media(min-width: 600px){
+      width: 100%;
+    }
+  }
+  &__lien{
+    width: fit-content;
+    @media(min-width:600px){
+      width: 100%;
+    }
+  }
+}
+.informations {
+  align-self: center;
+}
+.footer__copyright{
+  margin: auto auto;
+}
+
+
+/*
+!**** FOOTER ****!
 .footer{
   background: #00102E;
   color: #fff;
@@ -462,7 +507,7 @@ body{
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  @media(min-width: 500px){
+  @media(min-width: 600px){
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -471,13 +516,13 @@ body{
   .footer__copyright{
     flex: 1 0 100%;
     text-align: center;
-    @media(min-width: 500px){
+    @media(min-width: 600px){
       margin-top: 3em;
     }
   }
 }
 
-/* LOGO ET ADRESSE */
+!* LOGO ET ADRESSE *!
 .logo-adresse{
   flex: 1 0 100%;
   display: flex;
@@ -501,7 +546,7 @@ body{
     font-size: 1.5em;
     margin: 0 10px;
     @media(min-width: 500px){
-      /*padding: 1.5em;*/
+      !*padding: 1.5em;*!
       align-self: center;
       margin-right: 5px;
       max-width: 45%;
@@ -517,8 +562,11 @@ body{
     }
   }
 }
+*/
+
 
 /* FOOTER - NAVIGATION */
+/*
 .footerNav{
   list-style-type: none;
   align-self: center;
@@ -527,9 +575,9 @@ body{
     flex: 0 1 40%;
     padding-left: 3em;
   }
-  &__item{
+  !*&__item{
     width: 35%;
-  }
+  }*!
   &__lien{
     display: block;
     width: 100%;
@@ -574,7 +622,7 @@ body{
   }
 }
 
-/* BOUTON - FOOTER */
+!* BOUTON - FOOTER *!
 .informations__btn,
 .informations__btn:visited{
   align-self: center;
@@ -592,10 +640,10 @@ body{
   text-transform: uppercase;
   text-decoration: none;
   &:hover{
-    /*color: #057096;
+    !*color: #057096;
     border: #057096 solid 3px;
     outline: #057096 solid 3px;
-    background: #fff;*/
+    background: #fff;*!
     color: #00102E;
     font-weight: bolder;
     background: #FDDC3E;
@@ -606,9 +654,9 @@ body{
     text-decoration: underline;
   }
   &:focus{
-    /*border: #057096 solid 5px;
+    !*border: #057096 solid 5px;
     outline: #057096 solid 5px;
-    outline-offset: -13px;*/
+    outline-offset: -13px;*!
     border: #FDDC3E solid 5px;
     outline: none;
     font-weight: bolder;
@@ -616,7 +664,7 @@ body{
   }
 }
 
-/* LIEN FOOTER */
+!* LIEN FOOTER *!
 .information__lien,
 .information__lien:visited{
   color: #fff;
@@ -656,4 +704,4 @@ body{
     width: 50px;
     margin: 0 5px;
   }
-}
+}*/
