@@ -16,7 +16,7 @@ if ($blnLocal) {
     error_reporting(E_ALL);
 
 } else {
-    $strHost = 'timunix2.cegep-ste-foy.qc.ca';
+    $strHost = 'localhost';
     $strBD='22_pwem2_OFF';
     $strUser = 'etudiantsPWEM2';
     $strPassword = 't1M582+=$yy';
