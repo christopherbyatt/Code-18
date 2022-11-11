@@ -45,12 +45,13 @@ h2 {
   }
 }
 
-.textes .titreSecondaire__p {
+.textes, .titreSecondaire__p {
   margin: auto;
   width: 725px;
+  padding-bottom: 3rem;
 }
 @media (max-width: 600px) {
-  .textes .titreSecondaire__p {
+  .textes, .titreSecondaire__p {
     width: 100%;
   }
 }
