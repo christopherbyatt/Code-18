@@ -1,6 +1,7 @@
 <header class="header" role="banner">
     <img class="header__logo" src="<?php echo $niveau;?>images/logoOff_bleu_fonce.svg" alt="accueil">
     <ul class="nav">
+        <h1 class="screen-reader-only focusable">Festival OFF</h1>
         <li class="nav__item nav__item--un">
             <a href="<?php echo $niveau;?>index.php" class="nav__lien">Le OFF</a>
 

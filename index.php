@@ -72,8 +72,10 @@ for($cpt=0;$cpt<=2;$cpt++){
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/style-christopher.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php $niveau;?>css/style-christopher.css">
+    <link rel="stylesheet" href="<?php $niveau;?>css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
+
 </head>
 <body>
 <header>
@@ -105,9 +107,9 @@ for($cpt=0;$cpt<=2;$cpt++){
         <?php for($cpt=0;$cpt<count($arrArtistesChoisis); $cpt++) { ?>
             <li class="ctn-suggestionArtiste__item">
                 <figure class="artisteSugg">
-                    <source src="<?php echo $niveaux;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w880.jpg" media="(min-width:501px)">
-                    <source src="<?php echo $niveaux;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w440.jpg" media="(max-width:500px)">
-                    <img class="artisteSugg__img" src="<?php echo $niveaux;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w880.jpg" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
+                    <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w880.jpg" media="(min-width:501px)">
+                    <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w440.jpg" media="(max-width:500px)">
+                    <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_2__w880.jpg" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
                     <figcaption class="artisteSugg__figcap">
                         <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
                     </figcaption>
@@ -122,5 +124,7 @@ for($cpt=0;$cpt<=2;$cpt++){
 <footer class="footer" role="contentinfo">
     <?php include $niveau . 'inc/scripts/footer.inc.php'; ?>
 </footer>
+<script src="<?php echo $niveau;?>js/script_liste_artiste.js"></script>
+<script src="<?php echo $niveau;?>js/script/menu.js"></script>
 </body>
 </html>

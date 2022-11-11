@@ -61,13 +61,33 @@
     }
 
     ///////////////////REQUÊTE STYLE ARTISTE ///////////////////////////////////////
-//    $strRequeteArtisteStyle = '    SELECT nom_style FROM t_style
-//                                   INNER JOIN t_artiste ON t_artiste.id_artiste=t_style=id_style
+//    $strRequeteArtisteStyle = '    SELECT nom_style FROM ti_style_artiste
+//                                    INNER JOIN t_style ON t_style.id_style=ti_style_artiste.id_style
 //                                   WHERE id_artiste=' . $strIdArtiste;
 //
 //    $pdosArtisteStyle = $pdoConnexion->query($strRequeteArtisteStyle);
 //
-//    $pdosArtisteStyle->fetch()
+//    $arrArtisteStyle = array();
+//    for($intCptStyl=0; $ligneRandom=$pdosArtisteStyle->fetch(); $intCptStyl++){
+//        $arrArtisteStyle[$intCptStyl]['nom_style']=$ligneRandom['nom_style'];
+//    }
+//    //On libère la requête
+//    $pdosArtisteStyle->closeCursor();
+
+    $strRequeteNomStyle = 'SELECT DISTINCT t_style.id_style, nom_style, t_artiste.id_artiste
+                           FROM t_style
+                           INNER JOIN ti_style_artiste ON t_style.id_style=ti_style_artiste.id_style
+                           INNER JOIN t_artiste ON ti_style_artiste.id_artiste = t_artiste.id_artiste
+                           WHERE t_artiste.id_artiste=' . $strIdArtiste;
+
+    //Extraction de l'enregistrements de la BD
+    $strRequeteNomStyle = $pdoConnexion->query($strRequeteNomStyle);
+    $arrNomStyle = array();
+    //Extraction des enregistrements à afficher de la BD
+    for($intCptEnrStyle=0;$ligne = $strRequeteNomStyle->fetch();$intCptEnrStyle++){
+        $arrNomStyle[$intCptEnrStyle]['id_style']=$ligne['id_style'];
+        $arrNomStyle[$intCptEnrStyle]['nom_style']=$ligne['nom_style'];
+}
 
     ///////////////////REQUÊTE ARTISTE SIMILAIRE///////////////////////////////////////
 
@@ -129,15 +149,15 @@
     <link rel="stylesheet" href='../../css/style-michel.css' media="all">
     <link rel="stylesheet" href='../../css/style.css' media="all">
 </head>
-
-<body>
+<a href="#main" class="screen-reader-only focusable">Allez au contenu</a>
+<body class="conteneur">
     <header><?php include($niveau . "inc/scripts/header.inc.php"); ?></header>
-
     <main id="main" role="main" class="main">
-        <h1 class="titrePrincipal"><?php echo $arrArtistes['nom_artiste']?></h1>
-        <ul>
+        <h1 class="focusable titrePrincipal titrePrincipalh1"><?php echo $arrArtistes['nom_artiste']?></h1>
+        <ul class="ctn-artistePrincip">
+            <a class="artistePrincip__a" href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
             <?php
-            for($intCptImg=0; $intCptImg<3;$intCptImg++){ ?>
+            for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){ ?>
 <!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
@@ -145,67 +165,46 @@
             <?php } ?>
         </ul>
 
-        <h2>Test pour mettre images principales sur une ligne</h2>
-        <ul class="ctn-artistePrincip">
-            <li class="ctn-artistePrincip__item">
-                <?php for($intCpt=0;$intCpt<3;$intCpt++){ ?>
-                    <figure class="artistePrincip">
-<!--                    <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . '_' . ($intCptRandom+1) . '_w300.jpg'?><!--" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
-<!--                        <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" media="(min-width:501px)">-->
-                        <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w880.jpg" media="(max-width:500px)">
-                        <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCpt;?>__w440.jpg" alt="">
-<!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCpt]["id_artiste"];?><!--_2__w880.jpg" alt="--><?php //echo $arrArtistes[$intCpt]["nom_artiste"]; ?><!--">-->
-<!--                        <img class="artistePrincip__img" src="--><?php //echo $niveau;?><!--images/mini_placeholder.png" alt="">-->
-                        <figcaption class="artistePrincip__figcap">
-                            <a class="artistePrincip__figcap__lien" href=''><?php echo $arrArtistes['nom_artiste']?></a>
-                        </figcaption>
-                    </figure>
-                    <!--                        --><?php //echo "<br><img style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>"?>
-                <?php } ?>
-            </li>
-        </ul>
+        <h2 class="focusable titreSecondaire">Description</h2>
+        <p class="titreSecondaire__p"><?php echo $arrArtistes['description']?></p>
 
-        <a href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
-<!--        <img src="https://i.picsum.photos/id/386/960/490.jpg?hmac=RcIYBU3QIXDOP7NMdRKxaWlzf3izkxtM81zazZgricw" alt="">-->
+        <h2 class="focusable titreSecondaire">Provenance</h2>
+        <p class="titreSecondaire__p"><?php echo $arrArtistes['provenance']?></p>
 
-        <h2 class="titreSecondaire">Description</h2>
-        <p class="textes"><?php echo $arrArtistes['description']?></p>
+        <h2 class="focusable titreSecondaire">Style musical</h2>
+        <p class="titreSecondaire__p"><?php
+            for ($cptStyle = 0;$cptStyle < count($arrNomStyle);$cptStyle++){
+                echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php } ?></p>
+        <!--        <p class="textes">--><?php //echo $arrArtisteStyle[0]['nom_style']?><!--</p>-->
 
-        <h2 class="titreSecondaire">Provenance</h2>
-        <p class="textes"><?php echo $arrArtistes['provenance']?></p>
-
-        <h2 class="titreSecondaire">Style musical</h2>
-<!--        <p class="h2">--><?php //echo $arrArtistes['nom_style']?><!--Rock</p>-->
-        <p class="textes"">Rock</p>
-
-        <h2 class="titreSecondaire">Représentations</h2>
-        <ul>
+        <h2 class="focusable titreSecondaire">Représentations</h2>
+        <ul class="titreSecondaire__p">
             <?php echo $strAffichageEvent;?>
         </ul>
 
-        <h2 class="titreSecondaire">Découvrir d'autres artistes</h2>
+        <h2 class="focusable titreSecondaire">Découvrir d'autres artistes</h2>
         <ul class="ctn-suggestionArtiste">
             <?php
             if(count($arrArtisteChoisi)>0) {
                 for($intCptRandom=0; $intCptRandom<count($arrArtisteChoisi); $intCptRandom++) { ?>
+                <a class="" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>' aria-label="Accéder à la fiche de l'artiste: <?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]?>">
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
                             <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w440.jpg" media="(min-width:501px)">
                             <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" media="(max-width:500px)">
                             <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
-<!--                            <img class="artisteSugg__img" src="--><?php //echo $niveau;?><!--/images/mini_placeholder.png" alt="--><?php //echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?><!--">-->
                             <figcaption class="artisteSugg__figcap">
-                                <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/p-fiche-prenom.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
+                                <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"];?>'><?php echo $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?></a>
                             </figcaption>
                         </figure>
-<!--                        --><?php //echo "<br><img style='padding: 1em' src='https://fakeimg.pl/200/' alt='Artiste:'>"?>
-                    </li> <?php }
+                    </li>
+                </a> <?php }
             } else {
                 echo $arrArtisteSug[0];
             } ?>
-
+        </ul>
     </main>
-    <footer><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
+    <footer role="contentinfo"><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
 </body>
 
 </html>

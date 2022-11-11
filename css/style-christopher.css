@@ -4,7 +4,7 @@
   margin-right: 20px;
   margin-left: 20px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
   .main__article {
     margin-right: 220px;
     margin-left: 220px;

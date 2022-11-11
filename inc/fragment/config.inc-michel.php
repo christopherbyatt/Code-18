@@ -11,14 +11,15 @@ if ($blnLocal) {
     $strHost = 'localhost';
     $strBD='22_pwem2_off';
     $strUser = '22_pwem2_OFF';
-    $strPassword= '22_pwem2_OFF+!2';
+//    $strPassword= '22_pwem2_OFF_mdp+!2';
+        $strPassword= '22_pwem2_OFF+!2';
     error_reporting(E_ALL);
 
 } else {
     $strHost = 'timunix2.cegep-ste-foy.qc.ca';
-    $strBD='code-18';
-    $strUser = 'code-18';
-    $strPassword = 'code18';
+    $strBD='22_pwem2_OFF';
+    $strUser = 'etudiantsPWEM2';
+    $strPassword = 't1M582+=$yy';
     error_reporting(E_ALL & ~E_NOTICE);
 }
 

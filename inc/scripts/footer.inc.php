@@ -21,6 +21,3 @@
     </div>
     <p class="footer__copyright">© 2009-2022 Festival OFF Tous droits réservés</p>
 </footer>
-<script src="<?php echo $niveau;?>js/script_liste_artiste.js"></script>
-</body>
-</html>

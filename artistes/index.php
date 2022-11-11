@@ -130,8 +130,29 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
 </head>
 <body>
+<<<<<<< HEAD
 <?php include("../inc/scripts/header.inc.php")?>
 
+=======
+<header class="header" role="banner">
+    <img class="header__logo" src="../images/logoOff_bleu_fonce.svg" alt="accueil">
+    <ul class="nav">
+        <li class="nav__item nav__item--un">
+            <a href="../index.php" class="nav__lien">Le OFF</a>
+        </li>
+        <li class="nav__item nav__item--deux">
+            <a href="" class="nav__lien">Programmation</a>
+        </li>
+        <li class="nav__item nav__item--trois">
+            <a href="index.php" class="nav__lien">Artistes</a>
+        </li>
+        <li class="nav__item nav__item--quatre">
+            <a href="" class="nav__lien">Partenaires</a>
+        </li>
+    </ul>
+    <button class="header__btn main__btn" type="button">Acheter mon passeport</button>
+</header>
+>>>>>>> c2fd5802dcf909cd02f7900c6ef69ff7f61b1a6b
 <main class="main" role="main">
     <h1 class="titrePrincipal">Liste <br> des <br> artistes</h1>
     <section class="artistes">
@@ -147,7 +168,7 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
                     <figure class="infoArtiste">
                         <img class="infoArtiste__img" src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_2__w440.jpg" alt="<?php echo $arrNoms[$intCpt]["nom_artiste"] ?>">
                         <figcaption class="infoArtiste__nom">
-                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/p-fiche-prenom.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
+                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/index.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
                         </figcaption>
                     </figure>
                     <p class="infoArtiste__nom__p">Style(s): <?php echo $arrNoms[$intCpt]["artiste_style"]; ?></p>
