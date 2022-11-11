@@ -94,6 +94,10 @@ h2 {
   position: relative;
 }
 
+.artistePrincip__img {
+  border: 0.2rem solid white;
+}
+
 .ctn-artistePrincip .artistePrincip .artistePrincip__img {
   display: block;
   max-width: 100%;

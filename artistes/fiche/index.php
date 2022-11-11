@@ -131,7 +131,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fiche "artistes/fiche/index.php</title>
+    <title>Festival OFF-Fiche artiste</title>
     <link rel="stylesheet" href='../../css/style-michel.css' media="all">
     <link rel="stylesheet" href='../../css/style.css' media="all">
 </head>
