@@ -50,20 +50,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @media(min-width: 600px){
-    height: 500px;
-    padding-bottom: 0;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
   .header__logo{
     margin: 0 5px;
     display: block;
     max-width: 100%;
     @media(min-width: 600px) {
-      width: 40%;
+      max-width: 800px;
     }
   }
 
@@ -72,7 +64,6 @@
   .ctn_nav{
     margin: 3em 0;
     @media(min-width: 600px) {
-      width: 40%;
     }
   }
 
@@ -88,8 +79,11 @@
     margin: 0 0;
     padding-left: 0;
     @media(min-width: 600px) {
-      align-items: flex-end;
-      width: 55%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
       padding-left: 0;
       margin-right: 0;
     }
@@ -97,7 +91,8 @@
       text-align: center;
       position: relative;
       @media(min-width: 600px) {
-        flex: 0 1 25%;
+        flex-grow: 1;
+        margin: 0 1em;
       }
     }
     .nav__lien{
@@ -117,12 +112,20 @@
 /******************************/
 /*MENU DEPLIANT*/
 
-
+.nav__img{
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
 @media (max-width: 599px) {
   .nav__control{
     align-self: center;
     background: #00102e;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     &:hover{
       background: #00102e;
       border: #00102E solid 5px;
@@ -184,10 +187,6 @@
   text-transform: uppercase;
   text-decoration: none;
   &:hover{
-    /*color: #057096;
-    border: #057096 solid 3px;
-    outline: #057096 solid 3px;
-    background: #fff;*/
     color: #FDDC3E;
     font-weight: bolder;
     background: #00102E;
@@ -198,9 +197,6 @@
     text-decoration: underline;
   }
   &:focus{
-    /*border: #057096 solid 5px;
-    outline: #057096 solid 5px;
-    outline-offset: -13px;*/
     border: #00102E solid 5px;
     outline: none;
     font-weight: bolder;
@@ -438,8 +434,8 @@
       text-align: left;
     }
     &:hover{
-      background: rgba(253, 220, 62, 0.5);
-      text-decoration: none;
+      text-decoration: underline;
+      font-weight: bold;
     }
     &:active{
       background: #FDDC3E;
@@ -489,10 +485,6 @@
   text-transform: uppercase;
   text-decoration: none;
   &:hover{
-    /*color: #057096;
-    border: #057096 solid 3px;
-    outline: #057096 solid 3px;
-    background: #fff;*/
     color: #00102E;
     font-weight: bolder;
     background: #FDDC3E;
@@ -503,9 +495,6 @@
     text-decoration: underline;
   }
   &:focus{
-    /*border: #057096 solid 5px;
-    outline: #057096 solid 5px;
-    outline-offset: -13px;*/
     border: #FDDC3E solid 5px;
     outline: none;
     font-weight: bolder;

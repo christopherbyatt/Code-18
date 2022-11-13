@@ -743,16 +743,6 @@ h4,
   align-items: center;
   /*MENU*/
 }
-@media (min-width: 600px) {
-  .header {
-    height: 500px;
-    padding-bottom: 0;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
 .header .header__logo {
   margin: 0 5px;
   display: block;
@@ -760,16 +750,11 @@ h4,
 }
 @media (min-width: 600px) {
   .header .header__logo {
-    width: 40%;
+    max-width: 800px;
   }
 }
 .header .ctn_nav {
   margin: 3em 0;
-}
-@media (min-width: 600px) {
-  .header .ctn_nav {
-    width: 40%;
-  }
 }
 .header .nav {
   list-style-type: none;
@@ -785,8 +770,11 @@ h4,
 }
 @media (min-width: 600px) {
   .header .nav {
-    align-items: flex-end;
-    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
     padding-left: 0;
     margin-right: 0;
   }
@@ -797,7 +785,8 @@ h4,
 }
 @media (min-width: 600px) {
   .header .nav .nav__item {
-    flex: 0 1 25%;
+    flex-grow: 1;
+    margin: 0 1em;
   }
 }
 .header .nav .nav__lien {
@@ -817,11 +806,21 @@ h4,
 
 /******************************/
 /*MENU DEPLIANT*/
+.nav__img {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
 @media (max-width: 599px) {
   .nav__control {
     align-self: center;
     background: #00102e;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .nav__control:hover {
     background: #00102e;
@@ -883,10 +882,6 @@ h4,
 }
 .header__btn:hover,
 .header__btn:visited:hover {
-  /*color: #057096;
-  border: #057096 solid 3px;
-  outline: #057096 solid 3px;
-  background: #fff;*/
   color: #FDDC3E;
   font-weight: bolder;
   background: #00102E;
@@ -898,9 +893,6 @@ h4,
 }
 .header__btn:focus,
 .header__btn:visited:focus {
-  /*border: #057096 solid 5px;
-  outline: #057096 solid 5px;
-  outline-offset: -13px;*/
   border: #00102E solid 5px;
   outline: none;
   font-weight: bolder;
@@ -1163,8 +1155,8 @@ h4,
   }
 }
 .footerNav__lien:hover {
-  background: rgba(253, 220, 62, 0.5);
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
 }
 .footerNav__lien:active {
   background: #FDDC3E;
@@ -1219,10 +1211,6 @@ h4,
 }
 .informations__btn:hover,
 .informations__btn:visited:hover {
-  /*color: #057096;
-  border: #057096 solid 3px;
-  outline: #057096 solid 3px;
-  background: #fff;*/
   color: #00102E;
   font-weight: bolder;
   background: #FDDC3E;
@@ -1234,9 +1222,6 @@ h4,
 }
 .informations__btn:focus,
 .informations__btn:visited:focus {
-  /*border: #057096 solid 5px;
-  outline: #057096 solid 5px;
-  outline-offset: -13px;*/
   border: #FDDC3E solid 5px;
   outline: none;
   font-weight: bolder;

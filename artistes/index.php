@@ -127,7 +127,7 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-anais.css">
-    <meta title="Festival OFF - Liste des artistes">
+    <title>Festival OFF - Liste des artistes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
 </head>
 <body>
@@ -135,8 +135,45 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
     <?php include("../inc/scripts/header.inc.php")?>
     <main class="main" role="main">
     <h1 class="titrePrincipal">Liste <br> des <br> artistes</h1>
-    <section class="artistes">
 
+    <section class="styles">
+        <div class="ctnStyle">
+            <button class="titreSecondaireBis">Tous les styles</button>
+            <ul class="listeStyle style--closed">
+                <?php
+                for($intCpt1=0;$intCpt1<count($arrStyles);$intCpt1++){ ?>
+                    <li class="listeStyle__item"><a class="listeStyle__lien" href='<?php echo "?id_style=".$arrStyles[$intCpt1]["id_style"]?>'><?php echo $arrStyles[$intCpt1]["nom_style"]?></a></li>
+                <?php }
+                ?>
+            </ul>
+        </div>
+    </section>
+
+    <section class="artistes">
+        <div class="ctn-btn">
+            <?php
+            if($idStyle==0){
+                if($id_page>1){
+                    ?>
+                    <a href='index.php?id_page=<?php echo ($id_page-1); ?>' class="arriere" >&#9664; Précédent</a>
+                <?php }
+            } else { ?>
+
+                <a href='index.php?id_page=<?php echo ($id_page-1); ?>&id_style=<?php echo $idStyle; ?>' class="arriere" >&#9664; Précédent</a>
+            <?php }
+            ?>
+
+            <?php
+            if($idStyle==0){
+                if($id_page<$nbPages){
+                    ?>
+                    <a href='index.php?id_page=<?php echo ($id_page+1); ?>' class="avant">Suivant &#9654;</a>
+                <?php }
+            } else { ?>
+                <a href='index.php?id_page=<?php echo ($id_page+1); ?>&id_style=<?php echo $idStyle; ?>' class="avant">Suivant &#9654;</a>
+            <?php }
+            ?>
+        </div>
         <div class="ctn-infoArtiste">
             <?php
             if($idStyle !=0){
@@ -150,37 +187,14 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
                         <source src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_2__w440.jpg" media="(max-width:500px)">
                         <img class="infoArtiste__img" src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_2__w440.jpg" alt="<?php echo $arrNoms[$intCpt]["nom_artiste"] ?>">
                         <figcaption class="infoArtiste__nom">
-                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/index.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
+                            <a class="infoArtiste__nom__lien" href="<?php echo $niveau."artistes/fiche/index.php?id_artiste=".$arrNoms[$intCpt]["id_artiste"]; ?>" aria-label="lien vers la fiche de <?php echo $arrNoms[$intCpt]["nom_artiste"] ?>"><?php echo $arrNoms[$intCpt]["nom_artiste"] ?></a>
                         </figcaption>
                     </figure>
                     <p class="infoArtiste__nom__p">Style(s): <?php echo $arrNoms[$intCpt]["artiste_style"]; ?></p>
                 </div>
             <?php } ?>
         </div>
-        <div class="ctn-btn">
-            <?php
-            if($idStyle==0){
-                if($id_page>1){
-                    ?>
-                    <a href='index.php?id_page=<?php echo ($id_page-1); ?>' class="arriere" >&#9664;</a>
-                <?php }
-            } else { ?>
 
-                <a href='index.php?id_page=<?php echo ($id_page-1); ?>&id_style=<?php echo $idStyle; ?>' class="arriere" >&#9664;</a>
-            <?php }
-            ?>
-
-            <?php
-            if($idStyle==0){
-                if($id_page<$nbPages){
-                    ?>
-                    <a href='index.php?id_page=<?php echo ($id_page+1); ?>' class="avant">&#9654;</a>
-                <?php }
-            } else { ?>
-                <a href='index.php?id_page=<?php echo ($id_page+1); ?>&id_style=<?php echo $idStyle; ?>' class="avant">&#9654;</a>
-            <?php }
-            ?>
-        </div>
     </section>
 
     <h2 class="titreSecondaire">En vedette</h2>
@@ -188,34 +202,26 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
     <ul class="ctn-suggestionArtiste">
         <?php for($cpt=0;$cpt<count($arrArtistesChoisis); $cpt++) { ?>
             <li class="ctn-suggestionArtiste__item">
-                <figure class="artisteSugg">
-                    <source src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_3__w600.jpg" media="(min-width:501px)">
-                    <source src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_3__w280.jpg" media="(max-width:500px)">
-                    <img class="artisteSugg__img" src="../images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_3__w280.jpg" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
-                    <figcaption class="artisteSugg__figcap">
-                        <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>'><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
-                    </figcaption>
-                </figure>
+                <a href="<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>">
+                    <figure class="artisteSugg">
+                        <source src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_3__w600.jpg" media="(min-width:501px)">
+                        <source src="../images/images_artistes/<?php echo $arrNoms[$intCpt]["id_artiste"] ?>_3__w280.jpg" media="(max-width:500px)">
+                        <img class="artisteSugg__img" src="../images/images_artistes/<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>_3__w280.jpg" alt="<?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>">
+                        <figcaption class="artisteSugg__figcap">
+                            <a class="artisteSugg__figcap__lien" href='<?php echo $niveau ?>artistes/fiche/index.php?id_artiste=<?php echo $arrArtistesChoisis[$cpt]["id_artiste"];?>' aria-label="Lien vers la fiche de <?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?>"><?php echo $arrArtistesChoisis[$cpt]["nom_artiste"]; ?></a>
+                        </figcaption>
+                    </figure>
+                </a>
             </li>
         <?php } ?>
     </ul>
 
-    <section class="styles">
-        <div class="ctnStyle">
-            <h3 class="titreSecondaireBis">Tous les styles</h3>
-            <ul class="listeStyle">
-                <?php
-                for($intCpt1=0;$intCpt1<count($arrStyles);$intCpt1++){ ?>
-                    <li class="listeStyle__item"><a class="listeStyle__lien" href='<?php echo "?id_style=".$arrStyles[$intCpt1]["id_style"]?>'><?php echo $arrStyles[$intCpt1]["nom_style"]?></a></li>
-                <?php }
-                ?>
-            </ul>
-        </div>
-    </section>
 </main>
 <?php include("../inc/scripts/footer.inc.php")?>
 
 <script src="../js/menu.js"></script>
+<script src="../js/script_liste_artiste.js"></script>
+
 </body>
 </html>
 

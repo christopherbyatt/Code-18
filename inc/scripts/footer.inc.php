@@ -19,5 +19,5 @@
             <a class="reseaux__lien" href="https://www.youtube.com"><img class="reseaux__img" src="<?php echo $niveau;?>images/reseaux/youtube.svg" alt="youtube"></a>
         </div>
     </div>
-    <p class="footer__copyright">© 2009-2022 Festival OFF Tous droits réservés</p>
+    <p class="footer__copyright">© 2009-2022 Festival OFF  Tous droits réservés</p>
 </footer>
