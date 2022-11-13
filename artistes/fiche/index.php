@@ -144,8 +144,9 @@
             <?php
             for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){
                 if ($intCptImg!=null) {?>
-                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
-                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
+                    <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.webP" media="(min-width:501px)">
+                    <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
+                    <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
                 <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" alt="<?php echo "image de ". $arrArtistes['nom_artiste'];?>" onerror="this.onerror=null;this.src='<?php $niveau?>images/placeholder.png';">
                 <?php }
             } ?>
@@ -178,6 +179,7 @@
                     <li class="ctn-suggestionArtiste__item">
                         <figure class="artisteSugg">
                             <picture>
+                                <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w440.webP" media="(min-width:501px)">
                                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w440.jpg" media="(min-width:501px)">
                                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" media="(max-width:500px)">
                                 <img class="artisteSugg__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"] . "_" . $intCptRandom;?>__w280.jpg" alt="<?php echo $arrArtisteChoisi[$intCptRandom]["id_artiste"]. "_" . $arrArtisteChoisi[$intCptRandom]["nom_artiste"]; ?>">
