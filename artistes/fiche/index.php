@@ -143,12 +143,13 @@
         <ul class="ctn-artistePrincip">
             <a class="artistePrincip__a" href="<?php echo $arrArtistes['site_web_artiste']?>">Site Web</a><br>
             <?php
-            for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){ ?>
-<!--                <source src="--><?php //echo $niveau;?><!--images/images_artistes/--><?php //echo $arrArtistes[$intCptImg]["id_artiste"];?><!--_2__w440.jpg" media="(max-width:500px)">-->
+            for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){
+                if ($intCptImg!=null) {?>
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
                 <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
-                <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" alt="<?php echo "image de ". $arrArtistes['nom_artiste'];?>">
-            <?php } ?>
+                <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" alt="<?php echo "image de ". $arrArtistes['nom_artiste'];?>" onerror="this.onerror=null;this.src='<?php $niveau?>images/placeholder.png';">
+                <?php }
+            } ?>
         </ul>
 
         <h2 class="focusable titreSecondaire">Description</h2>
@@ -163,7 +164,6 @@
                     echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php
             }?>
         </p>
-
 
         <h2 class="focusable titreSecondaire">Représentations</h2>
         <ul class="titreSecondaire__p">
