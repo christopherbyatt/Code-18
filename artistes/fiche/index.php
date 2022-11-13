@@ -121,7 +121,6 @@
             array_splice($arrArtisteSug,$intIndexHazard,1);
         };
     }
-
 ?>
 
 <!doctype html>
@@ -152,25 +151,25 @@
             } ?>
         </ul>
 
-        <h2 class="focusable titreSecondaire">Description</h2>
+        <h2 class="titreSecondaire">Description</h2>
         <p class="titreSecondaire__p"><?php echo $arrArtistes['description']?></p>
 
-        <h2 class="focusable titreSecondaire">Provenance</h2>
+        <h2 class="titreSecondaire">Provenance</h2>
         <p class="titreSecondaire__p"><?php echo $arrArtistes['provenance']?></p>
 
-        <h2 class="focusable titreSecondaire">Style musical</h2>
+        <h2 class="titreSecondaire">Style musical</h2>
         <p class="titreSecondaire__p">| <?php
             for ($cptStyle = 0;$cptStyle < count($arrNomStyle);$cptStyle++){
                     echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php
             }?>
         </p>
 
-        <h2 class="focusable titreSecondaire">Représentations</h2>
+        <h2 class="titreSecondaire">Représentations</h2>
         <ul class="titreSecondaire__p">
             <?php echo $strAffichageEvent;?>
         </ul>
 
-        <h2 class="focusable titreSecondaire">Découvrir d'autres artistes</h2>
+        <h2 class="titreSecondaire">Découvrir d'autres artistes</h2>
         <ul class="ctn-suggestionArtiste">
             <?php
             if(count($arrArtisteChoisi)>0) {
