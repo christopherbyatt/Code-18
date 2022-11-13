@@ -158,10 +158,12 @@
         <p class="titreSecondaire__p"><?php echo $arrArtistes['provenance']?></p>
 
         <h2 class="focusable titreSecondaire">Style musical</h2>
-        <p class="titreSecondaire__p"><?php
+        <p class="titreSecondaire__p">| <?php
             for ($cptStyle = 0;$cptStyle < count($arrNomStyle);$cptStyle++){
-                echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php } ?></p>
-        <!--        <p class="textes">--><?php //echo $arrArtisteStyle[0]['nom_style']?><!--</p>-->
+                    echo $arrNomStyle[$cptStyle]['nom_style'] . '  |  '  ;?><?php
+            }?>
+        </p>
+
 
         <h2 class="focusable titreSecondaire">Représentations</h2>
         <ul class="titreSecondaire__p">
