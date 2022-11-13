@@ -196,6 +196,7 @@
         </ul>
     </main>
     <footer role="contentinfo"><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
+    <script src="<?php $niveau?>js/script_liste_artiste.js"></script>
 </body>
 
 </html>
