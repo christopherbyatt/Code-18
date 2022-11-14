@@ -197,5 +197,6 @@
     </main>
     <footer role="contentinfo"><?php include($niveau . "inc/scripts/footer.inc.php"); ?></footer>
     <script src="<?php echo $niveau?>js/menu.js"></script>
+<!--    <script src="js/menu.js"></script>-->
 </body>
 </html>
