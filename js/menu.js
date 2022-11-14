@@ -9,16 +9,19 @@
 // Déclaration d'objet(s)
 //*******************
 
+console.log(strPhp);
+
 let menu = {
     javascriptEnabled: document.body.classList.add('js'),
     strNavClosed: 'Menu',
     strNavOpen: 'Fermer',
-    strSourceClosed: '../images/icone_menu.svg',
-    strSourceOpen: '../images/icone_fermer_menu.svg',
+    strSourceClosed: 'images/icone_menu.svg',
+    strSourceOpen: 'images/icone_fermer_menu.svg',
     refButton: null,
     refSpan: null,
     refIcone: null,
     refNav: document.querySelector('.ctn_nav'),
+
 
     configurerNav: function () {
         //********** Création du bouton du menu mobile
@@ -38,7 +41,7 @@ let menu = {
         this.refIcone.className = 'nav__img';
 
         // On place le texte du Button dans son conteneur span
-        this.refIcone.src = this.strSourceClosed;
+        this.refIcone.src = strPhp+this.strSourceClosed;
         this.refSpan.innerHTML = this.strNavClosed;
 
         // On ajoute le Button dans le html:
@@ -61,11 +64,13 @@ let menu = {
         // On change le texte du bouton selon l'état du menu
         if (this.refNav.classList.contains('nav--closed')) {
             this.refSpan.innerHTML = this.strNavClosed;
-            this.refIcone.src = this.strSourceClosed;
+            this.refIcone.src = strPhp+this.strSourceClosed;
         } else {
             this.refSpan.innerHTML = this.strNavOpen;
-            this.refIcone.src = this.strSourceOpen;
+            this.refIcone.src = strPhp+this.strSourceOpen;
         }
+        console.log(strPhp+this.strNavOpen);
+        console.log(strPhp+this.strNavClosed);
     }
 };
 
@@ -76,42 +81,3 @@ let menu = {
 window.addEventListener('load', function () {
     menu.configurerNav();
 });
-
-
-
-
-
-
-/*
-refBtnMenu= document.querySelector(".menu");
-refNav=document.querySelector(".nav");
-
-function ouvrirFermerMenu(){
-    console.log(refBtnMenu.className)
-    console.log(refNav.className)
-
-    if(refBtnMenu.innerHTML==="Menu"){
-        refBtnMenu.classList.remove("nav--closed");
-        refBtnMenu.classList.add("nav--opened");
-        refBtnMenu.innerHTML="Fermer";
-        //refNav.classList.add("cache");
-        refNav.classList.remove("visually-hidden");
-        //refNav.style.display="none"
-    }else{
-        refBtnMenu.classList.remove("nav--opened");
-        refBtnMenu.classList.add("nav--closed");
-        refBtnMenu.innerHTML="Menu";
-        //refNav.classList.remove("cache");
-        refNav.classList.add("visually-hidden");
-        refNav.removeAttribute("style");
-    }
-
-    if(innerWidth>599){
-        refBtnMenu.toggle("visu")
-    }
-}
-
-
-document.querySelector(".menu").addEventListener("click", function (){
-    ouvrirFermerMenu()
-})*/
