@@ -219,7 +219,11 @@ for($cpt2=0; $cpt2<=2; $cpt2++) {
 </main>
 <?php include("../inc/scripts/footer.inc.php")?>
 
-<script src="../js/menu.js"></script>
+<script type="text/javascript">
+    let strPhp= "<?php echo $niveau; ?>";
+    console.log(strPhp)
+</script>
+<script type="text/javascript" src="../js/menu.js"></script>
 <script src="../js/script_liste_artiste.js"></script>
 
 </body>
