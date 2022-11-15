@@ -145,7 +145,7 @@
             for($intCptImg=0; $intCptImg<rand(3,5);$intCptImg++){
                 if ($intCptImg!=null) {?>
                     <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.webP" media="(min-width:501px)">
-                    <source src="<?php echo $niveau;?>images/imgages_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
+                    <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" media="(min-width:501px)">
                     <source src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w300.jpg" media="(max-width:500px)">
                 <img class="artistePrincip__img" src="<?php echo $niveau;?>images/images_artistes/<?php echo $strIdArtiste . "_" . $intCptImg;?>__w960.jpg" alt="<?php echo "image de ". $arrArtistes['nom_artiste'];?>" onerror="this.onerror=null;this.src='<?php $niveau?>images/placeholder.png';">
                 <?php }
