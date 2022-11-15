@@ -78,20 +78,53 @@ for($cpt=0;$cpt<=2;$cpt++){
 
 </head>
 <body>
+<a href="#main" class="screen-reader-only focusable">Allez au contenu</a>
 <header>
 <?php include $niveau . 'inc/scripts/header.inc.php'; ?>
 </header>
 
-<main class="main" role="main">
+<main class="main" role="main" id="main">
+
+    <div class="main__tarif">
+        <h1 class="titrePrincipal">TARIFS</h1>
+        <div class="main__article">
+        <h2 class="main__h2">Passeport:</h2>
+        <p class="main__p">10$ pour toute la durée du festival</p>
+        <p class="main__p">5$ à la porte / soir (spectacles à Méduse)</p>
+        <p class="main__p">Spectacles extérieurs gratuits</p>
+        <p class="main__p">Spectacles gratuits au Parvis de l’église Saint-Jean-Baptiste, au bar le Sacrilège et au Fou-Bar.</p>
+
+        <h4 class="main__h4">Procurez-vous un passeport en ligne ici dès maintenant !</h4>
+
+        <p class="main__p">Les passeports sont aussi disponibles en prévente chez nos partenaires:</p>
+        <p class="main__p">LA NINKASI HONORÉ-MERCIER : 840 Avenue Honoré-Mercier, Québec</p>
+        <p class="main__p">ÉRICO: 634 Rue Saint-Jean, Québec</p>
+        <p class="main__p">LE SACRILÈGE: 447 Rue Saint-Jean, Québec</p>
+        <p class="main__p">LE BONET D'ÂNE: 298 Rue Saint-Jean, Québec</p>
+        <p class="main__p">DISQUAIRE CD MÉLOMANE: 248 rue Saint-Jean, Québec</p>
+        <p class="main__p">LE KNOCK-OUT: 832 St-Joseph Est, Québec</p>
+    </div>
+    </div>
+    <div class="main__spectacle">
+        <h2 class="h2">LIEUX DE SPECTACLE</h2>
+        <div class="main__article">
+
+            <p class="main__p">MÉDUSE : 591, rue de Saint-Vallier Est, Québec</p>
+            <p class="main__p">LE SACRILÈGE : 447, rue Saint-Jean, Québec</p>
+            <p class="main__p">SCÈNE DESJARDIN ( LE PARVIS SAINT-JEAN-BAPTISTE ) ÉGLISE SAINT-JEAN-BAPTISTE : <br> 480 rue Saint-Jean, Québec</p>
+            <p class="main__p">LE FOU-BAR : 525 Rue St-Jean, Québec</p>
+            <p class="main__p">LA NINKASI DU FAUBOURG : 811 Rue Saint-Jean , Québec</p>
+        </div>
+    </div>
 <div class="main__actu">
-    <h1 class="titrePrincipal">ACTUALITÉS</h1>
+    <h2 class="h2">ACTUALITÉS</h2>
     <?php for($cpt=0;$cpt<count($arrActu);$cpt++){?>
-    <section class="main__sectionArticle">
+
         <div class="main__article">
             <h2 class="main__h2"><?php echo $arrActu[$cpt]['titre'];?></h2>
             <p class="main__p"><?php echo $arrActu[$cpt]['article'];
                 if(count(explode(" ", $arrActu[$cpt]["article"]))>=45){?>
-                    <a class="main__lien" href="#">... Lire la suite</a>
+                    <a class="main__lien" aria-label="Lire la suite : <?php echo $arrActu[$cpt]['titre'];?>" href="#">... Lire la suite</a>
                 <?php } ?></p>
             <h3 class="main__h3">Par <?php echo $arrActu[$cpt]["auteurs"];?>,<br>le
                 <?php echo $arrJour[$arrActu[$cpt]["jourSemaine"]-1];?>
@@ -99,7 +132,7 @@ for($cpt=0;$cpt<=2;$cpt++){
                 <?php echo $arrActu[$cpt]["heure"]."h".$arrActu[$cpt]["minutes"];?></h3>
         </div>
         <?php } ?>
-    </section>
+
 </div>
 <div class="main__artiste">
     <h2 class="h2">EN VEDETTES</h2>
@@ -117,14 +150,14 @@ for($cpt=0;$cpt<=2;$cpt++){
             </li>
         <?php } ?>
     </ul>
-    </section>
+
 
 </div>
 </main>
 <footer class="footer" role="contentinfo">
     <?php include $niveau . 'inc/scripts/footer.inc.php'; ?>
 </footer>
-<script src="<?php echo $niveau;?>js/script_liste_artiste.js"></script>
-<script src="<?php echo $niveau;?>js/script/menu.js"></script>
+<script type="text/javascript">    let strPhp= "<?php echo $niveau; ?>";</script>
+<script type="text/javascript" src="<?php echo $niveau?>js/menu.js"></script>
 </body>
 </html>

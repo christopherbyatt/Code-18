@@ -6,8 +6,18 @@
 }
 @media (min-width: 600px) {
   .main__article {
-    margin-right: 220px;
-    margin-left: 220px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+.main__spectacle {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+@media (min-width: 600px) {
+  .main__spectacle {
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }
 .main__sectionArticle {
@@ -15,13 +25,17 @@
   padding-bottom: 5px;
   padding-top: 10px;
 }
+.main__p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .main__h2 {
   padding-top: 10px;
 }
 .main__h3 {
   padding-bottom: 10px;
 }
-.main__h2, .main__p, .main__h3 {
+.main__h2, .main__p, .main__h3, .main__h4 {
   color: white;
   margin-left: 10px;
   margin-right: 10px;
@@ -49,12 +63,16 @@
   border: #00102E solid 4px;
 }
 
-h2 {
+h2, h3, h4 {
   text-align: center;
 }
 
-.h2 {
+.h2, .h3 {
   text-shadow: #057096 3px 3px;
+}
+
+.titrePrincipal {
+  margin: 0px;
 }
 
 /*# sourceMappingURL=style-christopher.css.map */
